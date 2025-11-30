@@ -4,7 +4,7 @@ import { Badge, Phone } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="bg-background text-foreground mx-auto flex w-full max-w-5xl items-center p-4 font-bold">
+    <nav className="bg-background text-foreground mx-auto flex w-full max-w-7xl items-center p-4 font-bold">
       <Link href="/" className="flex items-center gap-2">
         <Badge className="w-6" />
         <h1>Dal Fisio</h1>
