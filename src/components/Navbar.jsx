@@ -1,32 +1,32 @@
-import Link from 'next/link';
-import Button from './Button';
-import { Badge, Phone } from 'lucide-react';
+import Link from "next/link";
+import Button from "./Button";
+import { Badge, Phone } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="max-w-5xl mx-auto bg-white p-4 text-foreground font-bold flex  items-center w-full">
+    <nav className="bg-background text-foreground mx-auto flex w-full max-w-5xl items-center p-4 font-bold">
       <Link href="/" className="flex items-center gap-2">
         <Badge className="w-6" />
         <h1>Dal Fisio</h1>
       </Link>
 
-      <ul className="flex ml-auto mr-9 gap-9">
+      <ul className="mr-9 ml-auto flex gap-9">
         <li>
           <Link href="services">Servizi</Link>
         </li>
         <li>
-          <Link href="#">Chi siamo</Link>
+          <Link href="/chi-siamo">Chi siamo</Link>
         </li>
         <li>
-          <Link href="#">Spazi</Link>
+          <Link href="/spazi">Spazi</Link>
         </li>
         <li>
-          <Link href="#">Contatti</Link>
+          <Link href="/contatti">Contatti</Link>
         </li>
       </ul>
       <Button size="sm" className="flex items-center gap-2">
-        <Phone className="w-5 h-5" />
-        <span>Prenota Ora</span>
+        <Phone className="h-5 w-5" />
+        <span>Contattaci </span>
       </Button>
     </nav>
   );
