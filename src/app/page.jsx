@@ -17,7 +17,7 @@ import RoundedIconWrapper from "@/components/RoundedIconWrapper";
 
 export default function Home() {
   return (
-    <main className="mx-auto mt-9 max-w-7xl px-6">
+    <main className="mx-auto mt-9 max-w-7xl">
       <header className="relative">
         <div className="absolute right-10 bottom-10 left-10 flex flex-col gap-2">
           <h1 className="text-5xl font-bold text-white">Dal Fisio</h1>
@@ -44,7 +44,7 @@ export default function Home() {
         <img
           className="w-full rounded-2xl bg-fixed"
           src="/images/Heroimage.jpg"
-          alt="Hero"
+          alt=""
         />
       </header>
       <section className="mt-20 flex items-end justify-between gap-4">
@@ -105,12 +105,12 @@ export default function Home() {
         <div className="relative aspect-450/400 w-[500px]">
           <img
             src="/images/Fisioterapista1.jpg"
-            alt="fisioterapista"
+            alt=""
             className="absolute top-0 left-0 z-0 w-[75%]"
           />
           <img
             src="/images/People.jpg"
-            alt="bed"
+            alt=""
             className="absolute right-0 bottom-0 w-[45%] rounded-xl"
           />
         </div>
@@ -190,7 +190,7 @@ export default function Home() {
             <div className="flex gap-4">
               <img
                 src="/images/Avatarexample.jpg"
-                alt="user-image"
+                alt=""
                 className="rounded-full"
               ></img>
               <div className="flex flex-col gap-3">
@@ -215,7 +215,7 @@ export default function Home() {
             <div className="flex gap-4">
               <img
                 src="/images/Avatarexample.jpg"
-                alt="user-image"
+                alt=""
                 className="rounded-full"
               ></img>
               <div className="flex flex-col gap-3">
@@ -240,7 +240,7 @@ export default function Home() {
             <div className="flex gap-4">
               <img
                 src="/images/Avatarexample.jpg"
-                alt="user-image"
+                alt=""
                 className="rounded-full"
               ></img>
               <div className="flex flex-col gap-3">
@@ -313,8 +313,8 @@ export default function Home() {
         <div className="flex items-center justify-center gap-14">
           <div>
             <h2 className="mb-6 text-5xl font-bold">Chi Siamo</h2>
-            <p className="text-brownish mb-8">
-              Siamo Luca e Matteo, due fisioterapisti con la passione per il
+            <p className="text-brownish mb-8F">
+              Siamo Luca, Matteo e Marianna, tre fisioterapisti con la passione per il
               recupero funzionale. La nostra missione è aiutarti a superare il
               dolore e a tornare alle tue passioni, che sia lo sport o la vita
               di tutti i giorni.
@@ -323,8 +323,12 @@ export default function Home() {
               Abbiamo colaborato con
             </span>
             <div className="flex gap-3">
-              <img src="/images/Atalanta.png" className="w-7"></img>
-              <img src="/images/SportSpecialist.png" className="w-24"></img>
+              <img src="/images/Atalanta.png" alt="" className="w-7"></img>
+              <img
+                src="/images/SportSpecialist.png"
+                alt=""
+                className="w-24"
+              ></img>
 
               <Button className="ml-auto flex items-center gap-9">
                 Scopri di piú <MoveRight />
@@ -334,11 +338,12 @@ export default function Home() {
           <img
             src="/images/Phisiotherapists.jpg"
             className="min-w-xl rounded-xl"
+            alt=""
           />
         </div>
       </section>
       <section className="mt-36 flex items-center gap-10">
-        <img src="/images/Chair.png" className="min-w-2xl" />
+        <img src="/images/Chair.png" className="min-w-2xl" alt="" />
         <div className="flex flex-col gap-7">
           <h1 className="text-5xl font-bold">I Nostri Spazi</h1>
           <p className="text-brownish">
@@ -352,34 +357,69 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <section className="pt-36">
-        <h1 className="flex justify-center pb-20 text-5xl font-bold">
+      <section className="mt-36">
+        <h1 className="mb-20 flex justify-center text-5xl font-bold">
           Domande Frequenti
         </h1>
-        <div className="flex flex-col gap-5">
-          <ul>
-            <li className="absolute font-bold">
+        <div className="flex flex-col gap-10">
+          <details name="domanda" className="">
+            <summary className="font-bold ">
               Cosa devo portare alla prima visita?
-            </li>
-            <Plus className="text-primary relative ml-auto"></Plus>
-            <hr className="text-primary border-2"></hr>
-            <li className="absolute font-bold">
+            </summary>
+            <p className="text-brownish">
+              Per la prima visita è utile portare eventuali referti medici,
+              esami diagnostici e una lista dei sintomi che stai riscontrando.
+              Ti consigliamo inoltre un abbigliamento comodo che permetta di
+              eseguire movimenti e test posturali. In questo modo potremo
+              valutarti in maniera completa e accurata.
+            </p>
+          </details>
+          <details name="domanda">
+            <summary className="font-bold">
               Devo avere dolore per rivolgermi al fisioterapista?
-            </li>
-            <Plus className="text-primary relative ml-auto"></Plus>
-            <hr className="text-primary border-2"></hr>
-            <li className="absolute font-bold">Quanto durano le sedute?</li>
-            <Plus className="text-primary relative ml-auto"></Plus>
-            <hr className="text-primary border-2"></hr>
-            <li className="absolute font-bold">
+            </summary>
+            <p className="text-brownish">
+              Non è necessario avere dolore per iniziare un percorso
+              fisioterapico. Possiamo aiutarti anche in ottica preventiva, per
+              migliorare postura, mobilità o performance sportiva. Intervenire
+              prima che insorga un sintomo ti permette spesso di evitare
+              problemi più complessi in futuro.
+            </p>
+          </details>
+          <details name="domanda">
+            <summary className="font-bold">Quanto durano le sedute?</summary>
+            <p className="text-brownish">
+              La durata di una seduta dipende dal tipo di trattamento
+              necessario. In genere un incontro dura tra i 45 e i 60 minuti, ma
+              alcuni percorsi specifici possono richiedere tempi leggermente
+              diversi. Durante la prima valutazione ti indicheremo la durata più
+              adatta al tuo caso.
+            </p>
+          </details>
+          <details name="domanda">
+            <summary className="font-bold">
               Quante sedute sono necessarie per vedere risultati?
-            </li>
-            <Plus className="text-primary relative ml-auto"></Plus>
-            <hr className="text-primary border-2"></hr>
-            <li className="absolute font-bold">Quanto durano le sedute?</li>
-            <Plus className="text-primary relative ml-auto"></Plus>
-            <hr className="text-primary border-2"></hr>
-          </ul>
+            </summary>
+            <p className="text-brownish">
+              Dipende dal tipo di problema e dagli obiettivi del trattamento. In
+              alcuni casi bastano poche sedute per percepire miglioramenti,
+              mentre per situazioni più complesse può essere necessario un
+              percorso più lungo. Dopo la prima valutazione, ti forniremo una
+              stima personalizzata.
+            </p>
+          </details>
+          <details name="domanda">
+            <summary className="font-bold">
+              Posso continuare ad allenarmi durante il trattamento?
+            </summary>
+            <p className="text-brownish">
+              Dipende dal tipo di problema e dal piano terapeutico definito. In
+              molti casi è possibile continuare ad allenarsi adattando
+              l’attività, mentre in altri può essere utile una pausa temporanea.
+              Dopo la valutazione iniziale ti daremo indicazioni personalizzate
+              su cosa puoi fare in totale sicurezza.
+            </p>
+          </details>
         </div>
       </section>
     </main>

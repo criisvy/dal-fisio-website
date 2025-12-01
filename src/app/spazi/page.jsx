@@ -1,7 +1,7 @@
 export default function Spazi() {
   return (
-    <main>
-      <section className="mt-9 flex flex-col items-center">
+    <main className="mx-auto mt-9 max-w-7xl">
+      <section className="mt-9 flex justify-center">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col items-center gap-5">
             <h1 className="text-5xl font-bold">
@@ -14,10 +14,10 @@ export default function Spazi() {
             </p>
           </div>
           <div className="flex">
-            <img className="rounded-xl" src="/images/Bed.png"></img>
+            <img className="rounded-xl" src="/images/Bed.png" alt=""></img>
             <div className="flex flex-col">
-              <img className="rounded-xl" src="/images/Sticks.png"></img>
-              <img className="rounded-xl" src="/images/Gym.png"></img>
+              <img className="rounded-xl" src="/images/Sticks.png" alt=""></img>
+              <img className="rounded-xl" src="/images/Gym.png" alt=""></img>
             </div>
           </div>
         </div>
@@ -34,7 +34,11 @@ export default function Spazi() {
         </div>
         <div className="flex gap-9 pt-11">
           <article className="flex w-80 flex-col gap-3.5 rounded-xl bg-white px-3 py-2.5">
-            <img className="rounded-xl" src="/images/TerapiaManuale.png"></img>
+            <img
+              className="rounded-xl"
+              src="/images/TerapiaManuale.png"
+              alt=""
+            ></img>
             <h3 className="text-center font-bold">Terapia Manuale</h3>
             <p className="text-brownish text-center">
               Tecniche avanzate per il trattamento del dolore e il recupero
@@ -45,6 +49,7 @@ export default function Spazi() {
             <img
               className="rounded-xl"
               src="/images/Trattamentitecar.png"
+              alt=""
             ></img>
             <h3 className="text-center font-bold">Trattamenti Tecar</h3>
             <p className="text-brownish text-center">
@@ -53,7 +58,11 @@ export default function Spazi() {
             </p>
           </article>
           <article className="flex w-80 flex-col gap-3.5 rounded-xl bg-white px-3 py-2.5">
-            <img className="rounded-xl" src="/images/Valutazione.png"></img>
+            <img
+              className="rounded-xl"
+              src="/images/Valutazione.png"
+              alt=""
+            ></img>
             <h3 className="text-center font-bold">
               Valutazioni Personalizzate
             </h3>
@@ -64,7 +73,7 @@ export default function Spazi() {
           </article>
         </div>
       </section>
-      <section className="mt-24 flex flex-col items-center">
+      <section className="mt-24 flex justify-center">
         <div className="flex flex-col items-center gap-9">
           <h1 className="text-center text-5xl font-bold">
             La Palestra Riabilitativa (In Arrivo)
@@ -81,6 +90,7 @@ export default function Spazi() {
               <img
                 className="rounded-xl"
                 src="/images/WomanTraining1.png"
+                alt=""
               ></img>
               <h3 className="text-center font-bold">
                 Recupero Post-Chirurgico
@@ -93,6 +103,7 @@ export default function Spazi() {
               <img
                 className="rounded-xl"
                 src="/images/WomanTraining2.png"
+                alt=""
               ></img>
               <h3 className="text-center font-bold">Fisioterapia Sportiva</h3>
               <p className="text-brownish text-center">
@@ -101,7 +112,11 @@ export default function Spazi() {
               </p>
             </article>
             <article className="flex w-80 flex-col gap-3.5 rounded-xl bg-white px-2.5 py-2.5">
-              <img className="rounded-xl" src="/images/ManTraining1.png"></img>
+              <img
+                className="rounded-xl"
+                src="/images/ManTraining1.png"
+                alt=""
+              ></img>
               <h3 className="text-center font-bold">Esercizio Funzionale</h3>
               <p className="text-brownish text-center">
                 Attrezzature moderne per migliorare la forza e la stabilità del

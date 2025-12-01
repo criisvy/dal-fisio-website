@@ -3,7 +3,7 @@ import { CircleSmall } from "lucide-react";
 
 export default function ChiSiamo() {
   return (
-    <main>
+    <main className="mx-auto mt-9 max-w-7xl">
       <header className="mt-9 flex flex-col items-center gap-7">
         <h1 className="text-5xl font-bold">Chi siamo</h1>
         <p className="text-brownish max-w-2xl text-center">
@@ -26,46 +26,42 @@ export default function ChiSiamo() {
                 fiducia.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="flex gap-2.5">
-                <CircleSmall className="text-primary"></CircleSmall>
+            <li className="grid grid-cols-2 gap-6">
+              <ul className="flex gap-2.5">
+                <CircleSmall className="text-primary" />
                 <div className="flex flex-col">
-                  <span className="font-bold">
+                  <h3 className="font-bold">
                     Laurea triennale in Fisioterapia
-                  </span>
-                  <span className="text-brownish">
+                  </h3>
+                  <h3 className="text-brownish">
                     Università degli Studi di Bergamo
-                  </span>
+                  </h3>
                 </div>
-              </div>
-              <div className="flex gap-2.5">
-                <CircleSmall className="text-primary"></CircleSmall>
+              </ul>
+              <ul className="flex gap-2.5">
+                <CircleSmall className="text-primary" />
                 <div className="flex flex-col">
-                  <span className="font-bold">Corso di Dry Needling</span>
-                  <span className="text-brownish">PhisioVit</span>
+                  <h3 className="font-bold">Corso di Dry Needling</h3>
+                  <h3 className="text-brownish">PhisioVit</h3>
                 </div>
-              </div>
-              <div className="flex gap-2.5">
-                <CircleSmall className="text-primary"></CircleSmall>
+              </ul>
+              <ul className="flex gap-2.5">
+                <CircleSmall className="text-primary" />
                 <div className="flex flex-col">
-                  <span className="font-bold">Corso di Taping sportivo</span>
-                  <span className="text-brownish">
-                    Accademia Italiana Massaggi
-                  </span>
+                  <h3 className="font-bold">Corso di Taping sportivo</h3>
+                  <h3 className="text-brownish">Accademia Italiana Massaggi</h3>
                 </div>
-              </div>
-              <div className="flex gap-2.5">
-                <CircleSmall className="text-primary"></CircleSmall>
+              </ul>
+              <ul className="flex gap-2.5">
+                <CircleSmall className="text-primary" />
                 <div className="flex flex-col">
-                  <span className="font-bold">
+                  <h3 className="font-bold">
                     Corso Advanced di Tecniche Manuali
-                  </span>
-                  <span className="text-brownish">
-                    Accademia Terapie Manuali
-                  </span>
+                  </h3>
+                  <h3 className="text-brownish">Accademia Terapie Manuali</h3>
                 </div>
-              </div>
-            </div>
+              </ul>
+            </li>
           </div>
         </div>
       </section>
@@ -83,35 +79,33 @@ export default function ChiSiamo() {
                 ottenere risultati ottimali.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="flex gap-2.5">
-                <CircleSmall className="text-primary"></CircleSmall>
+            <ul className="grid grid-cols-2 gap-6">
+              <li className="flex gap-2.5">
+                <CircleSmall className="text-primary" />
                 <div className="flex flex-col">
-                  <span className="font-bold">
+                  <h3 className="font-bold">
                     Laurea triennale in Fisioterapia
-                  </span>
-                  <span className="text-brownish">
+                  </h3>
+                  <h3 className="text-brownish">
                     Università degli Studi di Bergamo
-                  </span>
+                  </h3>
                 </div>
-              </div>
-              <div className="flex gap-2.5">
-                <CircleSmall className="text-primary"></CircleSmall>
+              </li>
+              <li className="flex gap-2.5">
+                <CircleSmall className="text-primary" />
                 <div className="flex flex-col">
-                  <span className="font-bold">Corso di Dry Needling</span>
-                  <span className="text-brownish">PhisioVit</span>
+                  <h3 className="font-bold">Corso di Dry Needling</h3>
+                  <h3 className="text-brownish">PhisioVit</h3>
                 </div>
-              </div>
-              <div className="flex gap-2.5">
-                <CircleSmall className="text-primary"></CircleSmall>
+              </li>
+              <li className="flex gap-2.5">
+                <CircleSmall className="text-primary" />
                 <div className="flex flex-col">
-                  <span className="font-bold">Corso di Taping sportivo</span>
-                  <span className="text-brownish">
-                    Accademia Italiana Massaggi
-                  </span>
+                  <h3 className="font-bold">Corso di Taping sportivo</h3>
+                  <h3 className="text-brownish">Accademia Italiana Massaggi</h3>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -130,51 +124,48 @@ export default function ChiSiamo() {
                 risultati.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="flex gap-2.5">
-                <CircleSmall className="text-primary"></CircleSmall>
+            <ul className="grid grid-cols-2 gap-6">
+              <li className="flex gap-2.5">
+                <CircleSmall className="text-primary" />
                 <div className="flex flex-col">
-                  <span className="font-bold">
+                  <h3 className="font-bold">
                     Laurea triennale in Fisioterapia
-                  </span>
-                  <span className="text-brownish">
+                  </h3>
+                  <h3 className="text-brownish">
                     Università degli Studi di Bergamo
-                  </span>
+                  </h3>
                 </div>
-              </div>
-              <div className="flex gap-2.5">
-                <CircleSmall className="text-primary"></CircleSmall>
+              </li>
+              <li className="flex gap-2.5">
+                <CircleSmall className="text-primary" />
                 <div className="flex flex-col">
-                  <span className="font-bold">Corso di Dry Needling</span>
-                  <span className="text-brownish">PhisioVit</span>
+                  <h3 className="font-bold">Corso di Dry Needling</h3>
+                  <h3 className="text-brownish">PhisioVit</h3>
                 </div>
-              </div>
-              <div className="flex gap-2.5">
-                <CircleSmall className="text-primary"></CircleSmall>
+              </li>
+              <li className="flex gap-2.5">
+                <CircleSmall className="text-primary" />
                 <div className="flex flex-col">
-                  <span className="font-bold">Corso di Taping sportivo</span>
-                  <span className="text-brownish">
-                    Accademia Italiana Massaggi
-                  </span>
+                  <h3 className="font-bold">Corso di Taping sportivo</h3>
+                  <h3 className="text-brownish">Accademia Italiana Massaggi</h3>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
       <section className="mt-24 flex justify-center">
-        <div className="flex w-6xl flex-col items-center rounded-xl bg-white p-16">
-          <div className="flex flex-col gap-8 items-center">
-            <h1 className="text-center text-5xl font-bold">
+        <div className="flex w-6xl items-center rounded-xl bg-white p-16">
+          <div className="flex flex-col items-center gap-8">
+            <h2 className="text-center text-5xl font-bold">
               Pronto a Iniziare il Tuo Percorso di Recupero?
-            </h1>
+            </h2>
             <p className="text-brownish text-center">
               Contattaci oggi per scoprire come possiamo aiutarti a tornare al
               meglio delle tue capacità. Il nostro team è a tua disposizione per
               rispondere alle tue domande e guidarti nel tuo primo passo verso
               la guarigione.
             </p>
-
             <div>
               <Button className="w-fit px-7">Contattaci</Button>
               <Button className="bg-white">

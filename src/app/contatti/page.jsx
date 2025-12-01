@@ -4,7 +4,7 @@ import WhatsAppIcon from "@/icons/WhatsappIcon";
 
 export default function Contatti() {
   return (
-    <main>
+    <main className="mx-auto mt-9 max-w-7xl">
       <section>
         <article className="flex flex-col gap-11">
           <div className="flex flex-col items-center gap-6">
@@ -16,42 +16,46 @@ export default function Contatti() {
             </p>
           </div>
           <div className="flex justify-center gap-8">
-            <img className="rounded-xl" src="/images/Map.png"></img>
-            <div className="flex flex-col justify-center gap-6">
-              <div className="flex gap-1">
-                <MapPin className="text-primary font-bold"></MapPin>
+            <img
+              className="cursor-pointer rounded-xl"
+              src="/images/Map.png"
+              alt=""
+            ></img>
+            <ul className="flex flex-col justify-center gap-6">
+              <li className="flex cursor-pointer gap-1">
+                <MapPin className="text-primary font-bold" />
                 <span className="text-brownish underline">
                   Via dei Bastazi, 13 24126 Bergamo BG
                 </span>
-              </div>
-              <div className="flex gap-1">
-                <Phone className="text-primary font-bold"></Phone>
+              </li>
+              <li className="flex cursor-pointer gap-1">
+                <Phone className="text-primary font-bold" />
                 <span className="text-brownish underline">
                   +39 345 090 6595
                 </span>
-              </div>
-              <div className="flex gap-1">
-                <Mail className="text-primary font-bold"></Mail>
+              </li>
+              <li className="flex cursor-pointer gap-1">
+                <Mail className="text-primary font-bold" />
                 <span className="text-brownish underline">
                   info@dalfisio.it
                 </span>
-              </div>
+              </li>
               <Button className="bg-whatsapp flex w-fit items-center gap-2">
                 <WhatsAppIcon className="h-5 w-5 text-white"></WhatsAppIcon>Chat
                 on WhatsApp
               </Button>
-            </div>
+            </ul>
           </div>
         </article>
       </section>
       <section className="mt-24 w-5xl">
         <div className="flex flex-col items-center justify-center gap-12">
-          <h2 className="pb-1.5 text-4xl font-bold">Inviaci un mesaggio</h2>
-          <div className="flex flex-col gap-9">
+          <h2 className="mb-1.5 text-4xl font-bold">Inviaci un mesaggio</h2>
+          <div className="flex gap-9">
             <form className="flex w-fit flex-col gap-2.5">
               <div className="flex flex-col gap-2.5">
                 <label htmlFor="name">
-                  <span className="font-bold">Nome e Cognome</span>
+                  <h3 className="font-bold">Nome e Cognome</h3>
                 </label>
                 <input
                   className="rounded-xl bg-white p-2.5"
@@ -66,7 +70,7 @@ export default function Contatti() {
               <div className="flex gap-7">
                 <div className="flex flex-col gap-2.5">
                   <label htmlFor="email">
-                    <span className="font-bold">Indirizzo email</span>
+                    <h3 className="font-bold">Indirizzo email</h3>
                   </label>
                   <input
                     className="rounded-xl bg-white p-2.5"
@@ -79,7 +83,7 @@ export default function Contatti() {
                 </div>
                 <div className="flex flex-col gap-2.5">
                   <label htmlFor="number">
-                    <span className="font-bold">Numero di Telefono</span>
+                    <h3 className="font-bold">Numero di Telefono</h3>
                   </label>
                   <input
                     className="rounded-xl bg-white p-2.5"
@@ -92,7 +96,7 @@ export default function Contatti() {
               </div>
               <div className="flex flex-col gap-2.5">
                 <label htmlFor="subject">
-                  <span className="font-bold">Oggetto</span>
+                  <h3 className="font-bold">Oggetto</h3>
                 </label>
                 <input
                   className="rounded-xl bg-white p-2.5"
@@ -105,7 +109,7 @@ export default function Contatti() {
               </div>
               <div className="flex flex-col gap-2.5">
                 <label htmlFor="message">
-                  <span className="font-bold">Il tuo messaggio</span>
+                  <h3 className="font-bold">Il tuo messaggio</h3>
                 </label>
                 <input
                   className="rounded-xl bg-white p-2.5"
