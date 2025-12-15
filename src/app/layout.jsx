@@ -1,8 +1,12 @@
-import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
+import { Geist, Geist_Mono, Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-// import Footer from "@/components/Footer";
+import Footer from "@/components/Footer";
 const spaceGrotesk = Space_Grotesk({
+  weight: ["400", "500", "700"],
+});
+
+const inter = Inter({
   weight: ["400", "500", "700"],
 });
 
@@ -14,11 +18,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.className} antialiased`}>
+      <body className={`${inter.className} antialiased`}>
         <Navbar />
         {children}
+        <Footer />
         {/* <Footer /> */}
       </body>
     </html>
   );
 }
+
+export { spaceGrotesk };

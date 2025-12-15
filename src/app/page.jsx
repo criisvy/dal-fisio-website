@@ -12,56 +12,63 @@ import {
   BookMarked,
   FlaskConical,
   Plus,
+  Link,
 } from "lucide-react";
 import RoundedIconWrapper from "@/components/RoundedIconWrapper";
+import { Space_Grotesk } from "next/font/google";
 
 export default function Home() {
   return (
-    <main className="mx-auto mt-9 max-w-7xl">
+    <main className="mx-auto mt-6 max-w-7xl px-4 sm:mt-9">
       <header className="relative">
-        <div className="absolute right-10 bottom-10 left-10 flex flex-col gap-2">
-          <h1 className="text-5xl font-bold text-white">Dal Fisio</h1>
-          <p className="max-w-3xl text-xl text-white">
+        <div className="absolute right-0 bottom-0 left-0 flex flex-col gap-2 p-4 pb-9 sm:p-10">
+          <h1 className="text-4xl font-bold text-white sm:text-5xl">
+            Dal Fisio
+          </h1>
+          <p className="max-w-3xl text-base text-white sm:text-xl">
             Fisioterapia e riabilitazione sportiva a Bergamo. Specializzati nel
             recupero post-chirurgico e post-traumatico.
           </p>
-          <div className="flex gap-3">
-            <Button size="sm" className="flex w-fit items-center gap-2">
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Button
+              size="sm"
+              className="hover:bg-brownish flex w-full items-center justify-center gap-2 transition sm:w-fit"
+            >
               <Phone className="h-5 w-5" />
               <span>345 090 6595</span>
             </Button>
             <Button
               size="sm"
-              className="flex w-fit items-center gap-2 bg-white"
+              className="hover:bg-brownish flex w-full items-center justify-center gap-2 bg-white transition sm:w-fit"
             >
-              <WhatsAppIcon className="h-5 w-5" />
-              <span className="font-bold text-black">
+              <WhatsAppIcon className="h-5 w-5 hover:text-white" />
+              <span className="font-bold text-black hover:text-white">
                 Contattaci su WhatsApp
               </span>
             </Button>
           </div>
         </div>
         <img
-          className="w-full rounded-2xl bg-fixed"
+          className="h-[584px] w-full rounded-2xl bg-fixed object-cover sm:h-auto"
           src="/images/Heroimage.jpg"
           alt=""
         />
       </header>
-      <section className="mt-20 flex items-end justify-between gap-4">
-        <div className="flex max-w-lg flex-col">
+      <section className="mt-7 flex flex-col items-center justify-center gap-4 sm:mt-20 sm:flex-row sm:items-start sm:justify-between">
+        <div className="flex w-full flex-col sm:max-w-lg">
           <div className="flex flex-col gap-2.5">
-            <h2 className="text-5xl font-bold">I Nostri Servizi</h2>
+            <h2 className="text-4xl font-bold sm:text-5xl">I Nostri Servizi</h2>
             <p className="text-brownish">
               Offriamo trattamenti mirati e personalizzati per una vasta gamma
               di necessità
             </p>
           </div>
           <ul className="mb-9">
-            <li className="mt-9 flex gap-3">
+            <li className="mt-6 flex gap-3 rounded-xl bg-white p-3.5 sm:mt-9 sm:bg-none">
               <RoundedIconWrapper className="text-sm">
                 <ShieldPlus className="text-primary" />
               </RoundedIconWrapper>
-              <div>
+              <div className="">
                 <h3 className="font-bold">Recupero Post-Chirurgico</h3>
                 <p className="text-brownish">
                   Piani di riabilitazione per ritrovare la mobilità dopo un
@@ -69,7 +76,7 @@ export default function Home() {
                 </p>
               </div>
             </li>
-            <li className="mt-9 flex gap-3">
+            <li className="mt-2.5 flex gap-3 rounded-xl bg-white p-3.5 sm:mt-9 sm:bg-none">
               <RoundedIconWrapper className="text-sm">
                 <Volleyball className="text-primary" />
               </RoundedIconWrapper>
@@ -81,7 +88,7 @@ export default function Home() {
                 </p>
               </div>
             </li>
-            <li className="mt-9 flex gap-3">
+            <li className="mt-3 flex gap-3 bg-white p-3.5 sm:mt-9 sm:bg-none">
               <RoundedIconWrapper className="text-sm">
                 <Bone className="text-primary" />
               </RoundedIconWrapper>
@@ -96,29 +103,31 @@ export default function Home() {
           </ul>
           <Button
             size="sm"
-            className="flex w-fit items-center gap-2.5 p-2.5 px-3.5"
+            className="flex w-fit items-center gap-2.5 p-2.5 px-3.5 sm:w-full"
           >
             Vedi tutti i servizi
             <MoveRight />
           </Button>
         </div>
-        <div className="relative aspect-450/400 w-[500px]">
+        <div className="flex w-[408px] justify-center gap-2.5 sm:relative sm:aspect-450/400 sm:w-[500px]">
           <img
             src="/images/Fisioterapista1.jpg"
             alt=""
-            className="absolute top-0 left-0 z-0 w-[75%]"
+            className="max-w[200px] min-w[200px] top-0 left-0 z-0 sm:absolute sm:w-[75%]"
           />
           <img
             src="/images/People.jpg"
             alt=""
-            className="absolute right-0 bottom-0 w-[45%] rounded-xl"
+            className="min-w[200px] right-0 bottom-0 hidden rounded-xl sm:absolute sm:w-[45%]"
           />
         </div>
       </section>
-      <section className="mt-36">
-        <h2 className="mb-20 text-5xl font-bold">Cosa Faciamo per te?</h2>
-        <div className="mx-auto grid max-w-5xl grid-cols-2 justify-center gap-6">
-          <article className="flex flex-col rounded-xl bg-white p-10">
+      <section className="mt-7 sm:mt-36">
+        <h2 className="mb-3.5 text-center text-4xl font-bold sm:mb-20 sm:text-left sm:text-5xl">
+          Cosa Faciamo per te?
+        </h2>
+        <div className="mx-auto flex max-w-5xl grid-cols-2 flex-col justify-center gap-5 sm:grid sm:gap-6">
+          <article className="flex min-w-sm flex-col rounded-xl bg-white p-10">
             <img src="/images/Backpain.jpg" alt="" />
             <div className="flex flex-col gap-4 pt-7">
               <h3 className="text-lg font-bold">
@@ -132,7 +141,7 @@ export default function Home() {
               </p>
             </div>
           </article>
-          <article className="flex flex-col rounded-xl bg-white p-10">
+          <article className="flex min-w-sm flex-col rounded-xl bg-white p-10">
             <img src="/images/Exercise.jpg" alt="" />
             <div className="flex flex-col gap-4 pt-7">
               <h3 className="text-lg font-bold">Sport e Prevenzione</h3>
@@ -144,7 +153,7 @@ export default function Home() {
               </p>
             </div>
           </article>
-          <article className="flex flex-col rounded-xl bg-white p-10">
+          <article className="flex min-w-sm flex-col rounded-xl bg-white p-10">
             <img src="/images/Running.jpg" alt="" />
             <div className="flex flex-col gap-4 pt-7">
               <h3 className="text-lg font-bold">Traumi e Infortuni</h3>
@@ -156,7 +165,7 @@ export default function Home() {
               </p>
             </div>
           </article>
-          <article className="flex flex-col rounded-xl bg-white p-10">
+          <article className="flex min-w-sm flex-col rounded-xl bg-white p-10">
             <img src="/images/Backpain2.jpg" alt="" />
             <div className="flex flex-col gap-4 pt-7">
               <h3 className="text-lg font-bold">Dolori Articolari e Cronici</h3>
@@ -170,18 +179,17 @@ export default function Home() {
           </article>
         </div>
       </section>
-      <section className="mt-36">
-        <h2 className="mb-20 text-center text-5xl font-bold">
+      <section className="mt-7 sm:mt-36">
+        <h2 className="mb-7 text-center text-4xl font-bold sm:mb-20 sm:text-5xl">
           Cosa dicono di noi?
         </h2>
-
-        <div className="relative flex gap-5">
-          <button className="absolute top-1/2 -left-6 -translate-y-1/2 cursor-pointer">
+        <div className="relative flex flex-col gap-5 sm:flex-row">
+          <button className="hidden cursor-pointer sm:absolute sm:top-1/2 sm:-left-6 sm:block sm:-translate-y-1/2">
             <RoundedIconWrapper className="bg-primary">
               <MoveLeft className="text-white"></MoveLeft>
             </RoundedIconWrapper>
           </button>
-          <button className="absolute top-1/2 -right-6 -translate-y-1/2 cursor-pointer">
+          <button className="hidden cursor-pointer sm:absolute sm:top-1/2 sm:-right-6 sm:block sm:-translate-y-1/2">
             <RoundedIconWrapper className="bg-primary">
               <MoveRight className="text-white"></MoveRight>
             </RoundedIconWrapper>
@@ -263,12 +271,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mt-36">
-        <h2 className="mb-20 text-center text-5xl font-bold">
+      <section className="sm:bg-background mt-7 rounded-xl bg-white p-4 sm:mt-36">
+        <h2 className="mb-7 text-center text-4xl font-bold sm:mb-20 sm:text-5xl">
           I Nostri Valori
         </h2>
-        <div className="flex gap-16">
-          <article className="flex gap-4">
+        <div className="flex flex-col gap-16 sm:flex-row">
+          <article className="flex gap-4 px-4 sm:px-0">
             <RoundedIconWrapper className="mt-1">
               <ShieldCheck className="text-primary" />
             </RoundedIconWrapper>
@@ -283,7 +291,7 @@ export default function Home() {
               </p>
             </div>
           </article>
-          <article className="flex gap-4">
+          <article className="flex gap-4 px-4 sm:px-0">
             <RoundedIconWrapper className="mt-1">
               <BookMarked className="text-primary" />
             </RoundedIconWrapper>
@@ -295,7 +303,7 @@ export default function Home() {
               </p>
             </div>
           </article>
-          <article className="flex gap-4">
+          <article className="flex gap-4 px-4 sm:px-0">
             <RoundedIconWrapper className="mt-1">
               <FlaskConical className="text-primary" />
             </RoundedIconWrapper>
@@ -309,61 +317,79 @@ export default function Home() {
           </article>
         </div>
       </section>
-      <section className="mt-36 flex flex-col items-center">
-        <div className="flex items-center justify-center gap-14">
-          <div>
-            <h2 className="mb-6 text-5xl font-bold">Chi Siamo</h2>
-            <p className="text-brownish mb-8F">
-              Siamo Luca, Matteo e Marianna, tre fisioterapisti con la passione per il
-              recupero funzionale. La nostra missione è aiutarti a superare il
-              dolore e a tornare alle tue passioni, che sia lo sport o la vita
-              di tutti i giorni.
+      <section className="sm:bg-background mt-7 flex flex-col items-center rounded-xl bg-white p-4 sm:mt-36">
+        <div className="flex flex-col items-center justify-center gap-3.5 sm:flex-row sm:gap-14">
+          <div className="mx-4">
+            <h2 className="mb-2.5 text-left text-4xl font-bold sm:mb-6 sm:text-5xl">
+              Chi Siamo
+            </h2>
+            <p className="text-brownish mb-2.5 sm:mb-8">
+              Siamo Luca, Matteo e Marianna, tre fisioterapisti con la passione
+              per il recupero funzionale. La nostra missione è aiutarti a
+              superare il dolore e a tornare alle tue passioni, che sia lo sport
+              o la vita di tutti i giorni.
             </p>
-            <span className="text-brownish mb-4 block font-bold">
+            <span className="text-brownish mb-2.5 block font-bold sm:mb-4">
               Abbiamo colaborato con
             </span>
-            <div className="flex gap-3">
-              <img src="/images/Atalanta.png" alt="" className="w-7"></img>
-              <img
-                src="/images/SportSpecialist.png"
-                alt=""
-                className="w-24"
-              ></img>
-
-              <Button className="ml-auto flex items-center gap-9">
+            <div className="flex flex-col gap-2.5 sm:flex-row">
+              <div className="flex gap-3">
+                <img src="/images/Atalanta.png" alt="" className="w-7"></img>
+                <img
+                  src="/images/SportSpecialist.png"
+                  alt=""
+                  className="w-24"
+                ></img>
+              </div>
+              <Button className="flex w-full items-center justify-center gap-9 rounded-xl sm:ml-auto sm:w-fit">
                 Scopri di piú <MoveRight />
               </Button>
             </div>
           </div>
           <img
             src="/images/Phisiotherapists.jpg"
-            className="min-w-xl rounded-xl"
+            className="h-80 w-full rounded-xl object-cover object-top sm:h-full sm:min-w-xl"
             alt=""
           />
         </div>
       </section>
-      <section className="mt-36 flex items-center gap-10">
-        <img src="/images/Chair.png" className="min-w-2xl" alt="" />
-        <div className="flex flex-col gap-7">
-          <h1 className="text-5xl font-bold">I Nostri Spazi</h1>
+      <section className="sm:bg-background mt-7 flex flex-col items-center gap-10 rounded-xl bg-white p-4 sm:mt-36 sm:flex-row">
+        <div className="order-1 flex flex-col gap-7 sm:order-2">
+          <h1 className="text-left text-4xl font-bold sm:text-5xl">
+            I Nostri Spazi
+          </h1>
           <p className="text-brownish">
             Un ambiente moderno, accogliente e dotato delle migliori
             attrezzature per garantirti un percorso di recupero efficace e
             confortevole.
           </p>
-          <Button className="ml-auto flex w-fit gap-3.5">
+        </div>
+        <div className="order-2 flex w-full flex-col sm:order-1 sm:flex-row">
+          <img
+            src="/images/INostriSpazi1.png"
+            className="h-52 min-w-96 sm:h-full sm:min-w-52"
+            alt=""
+          />
+          <img
+            src="/images/INostriSpazi2.png"
+            className="h-52 min-w-96 sm:h-full sm:min-w-52"
+            alt=""
+          ></img>
+        </div>
+        <div className="order-3 w-full sm:order-2 sm:self-end">
+          <Button className="ml-auto flex w-full justify-center gap-3.5 sm:w-fit">
             Esplora lo studio
             <MoveRight></MoveRight>
           </Button>
         </div>
       </section>
-      <section className="mt-36">
-        <h1 className="mb-20 flex justify-center text-5xl font-bold">
+      <section className="sm:bg-background mt-7 bg-white p-4 sm:mt-36">
+        <h1 className="mb-2.5 flex text-left text-4xl font-bold sm:mb-20 sm:justify-center sm:text-5xl">
           Domande Frequenti
         </h1>
-        <div className="flex flex-col gap-10">
-          <details name="domanda" className="">
-            <summary className="font-bold ">
+        <div className="flex flex-col gap-2.5 sm:gap-10">
+          <details name="domanda" className="custom-details">
+            <summary className="font-bold">
               Cosa devo portare alla prima visita?
             </summary>
             <p className="text-brownish">
@@ -374,7 +400,7 @@ export default function Home() {
               valutarti in maniera completa e accurata.
             </p>
           </details>
-          <details name="domanda">
+          <details name="domanda" className="custom-details">
             <summary className="font-bold">
               Devo avere dolore per rivolgermi al fisioterapista?
             </summary>
@@ -386,7 +412,7 @@ export default function Home() {
               problemi più complessi in futuro.
             </p>
           </details>
-          <details name="domanda">
+          <details name="domanda" className="custom-details">
             <summary className="font-bold">Quanto durano le sedute?</summary>
             <p className="text-brownish">
               La durata di una seduta dipende dal tipo di trattamento
@@ -396,8 +422,8 @@ export default function Home() {
               adatta al tuo caso.
             </p>
           </details>
-          <details name="domanda">
-            <summary className="font-bold">
+          <details name="domanda" className="custom-details">
+            <summary className="font-extrabold">
               Quante sedute sono necessarie per vedere risultati?
             </summary>
             <p className="text-brownish">
@@ -408,7 +434,7 @@ export default function Home() {
               stima personalizzata.
             </p>
           </details>
-          <details name="domanda">
+          <details name="domanda" className="custom-details">
             <summary className="font-bold">
               Posso continuare ad allenarmi durante il trattamento?
             </summary>
@@ -421,6 +447,30 @@ export default function Home() {
             </p>
           </details>
         </div>
+      </section>
+      <section className="mt-7 flex justify-center sm:mt-24 sm:hidden">
+        <article className="flex w-5xl flex-col items-center gap-2.5 rounded-xl bg-white p-4 sm:py-8">
+          <div className="flex flex-col gap-2.5 sm:gap-8">
+            <h2 className="px-6 text-center text-2xl font-bold text-black sm:text-5xl">
+              Pronto a Iniziare il Tuo Percorso Recupero?
+            </h2>
+            <p className="text-brownish text-center">
+              Contattaci oggi per scoprire come possiamo aiutarti a tornare al
+              meglio delle tue capacità. Il nostro team è a tua disposizione per
+              rispondere alle tue domande e guidarti nel tuo primo passo verso
+              la guarigione.
+            </p>
+          </div>
+          <Button className="flex w-full justify-center gap-2.5 rounded-xl">
+            Contattaci
+          </Button>
+          <Button className="flex w-full justify-center gap-2.5 bg-white outline-1 outline-black">
+            <span className="font-bold text-black">
+              Scopri i nostri servizi
+            </span>
+            <MoveRight className="text-black"></MoveRight>
+          </Button>
+        </article>
       </section>
     </main>
   );

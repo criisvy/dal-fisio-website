@@ -20,6 +20,44 @@
   --color-whatsapp: var(--whatsapp);
 }
 
+@layer components {
+  .custom-details {
+    border-block-end: 3px solid var(--primary);
+    margin-block: 0.5rem;
+    padding-block: 0.5rem;
+  }
+
+  .custom-details summary {
+    position: relative;
+    anchor-name: --summary;
+  }
+
+  .custom-details summary::marker {
+    content: "";
+  }
+  .custom-details summary::after,
+  summary::before {
+    content: "";
+    border-block-start: 3px solid orangered;
+    height: 0;
+    width: 1rem;
+
+    inset-block-start: 50%;
+    inset-inline-end: 0;
+
+    position: absolute;
+    position-anchor: --summary;
+    position-area: top end;
+  }
+  .custom-details summary::after {
+    transform: rotate(90deg);
+    transform-origin: 50%;
+  }
+  .custom-details[open] summary::after {
+    transform: rotate(0deg);
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
