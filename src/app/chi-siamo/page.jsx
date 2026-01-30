@@ -1,10 +1,10 @@
 import Button from "@/components/Button";
-import { CircleSmall } from "lucide-react";
+import { CircleSmall, Award } from "lucide-react";
 
 export default function ChiSiamo() {
   return (
-    <main className="mx-auto mt-9 max-w-7xl">
-      <header className="mx-4 mt-9 flex flex-col items-center gap-7">
+    <main className="mx-auto mt-9 max-w-6xl">
+      <header className="mx-4 mt-9 flex flex-col items-center gap-2.5 sm:gap-7">
         <h1 className="text-5xl font-bold">Chi siamo</h1>
         <p className="text-brownish max-w-2xl text-center">
           Professionisti della fisioterapia a Bergamo. Lavoriamo insieme per
@@ -12,13 +12,13 @@ export default function ChiSiamo() {
           completo recupero funzionale.
         </p>
       </header>
-      <section>
-        <article className="mx-4 mt-6 flex justify-center sm:mt-24">
+      <section className="flex flex-col gap-6">
+        <article className="mx-4 flex justify-center sm:mt-20">
           <div className="flex w-6xl flex-col items-center gap-6 rounded-xl bg-white p-4 sm:flex-row sm:gap-9 sm:px-20 sm:py-16">
             <div className="w-full">
               <img
                 src="/images/LucaPic.png"
-                className="w-full"
+                className="w-full min-w-3xs"
                 alt="luca-gavazzeni"
               ></img>
             </div>
@@ -34,8 +34,8 @@ export default function ChiSiamo() {
                 </p>
               </div>
               <ul className="flex flex-col gap-2.5 text-sm/relaxed sm:grid sm:grid-cols-2 sm:gap-6">
-                <li className="flex items-center gap-2.5">
-                  <CircleSmall className="text-primary" />
+                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
+                  <Award className="text-primary" />
                   <div className="flex flex-col">
                     <h3 className="font-bold">
                       Laurea triennale in Fisioterapia
@@ -45,15 +45,15 @@ export default function ChiSiamo() {
                     </h3>
                   </div>
                 </li>
-                <li className="flex items-center gap-2.5">
-                  <CircleSmall className="text-primary" />
+                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
+                  <Award className="text-primary" />
                   <div className="flex flex-col">
                     <h3 className="font-bold">Corso di Dry Needling</h3>
                     <h3 className="text-brownish">PhisioVit</h3>
                   </div>
                 </li>
-                <li className="flex items-center gap-2.5">
-                  <CircleSmall className="text-primary" />
+                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
+                  <Award className="text-primary" />
                   <div className="flex flex-col">
                     <h3 className="font-bold">Corso di Taping sportivo</h3>
                     <h3 className="text-brownish">
@@ -61,26 +61,26 @@ export default function ChiSiamo() {
                     </h3>
                   </div>
                 </li>
-                <ul className="flex items-center gap-2.5">
-                  <CircleSmall className="text-primary" />
+                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
+                  <Award className="text-primary" />
                   <div className="flex flex-col">
                     <h3 className="font-bold">
                       Corso Advanced di Tecniche Manuali
                     </h3>
                     <h3 className="text-brownish">Accademia Terapie Manuali</h3>
                   </div>
-                </ul>
+                </li>
               </ul>
             </div>
           </div>
         </article>
-        <article className="mx-4 mt-24 flex justify-center">
-          <div className="flex w-6xl flex-col items-center gap-6 rounded-xl bg-white p-4 sm:flex-row sm:gap-9 sm:px-20 sm:py-16">
+        <article className="mx-4 flex justify-center sm:mt-20">
+          <div className="flex w-6xl flex-col gap-6 rounded-xl bg-white p-4 sm:flex-row sm:gap-9 sm:px-20 sm:py-16">
             <div className="w-full sm:order-2">
               <img
                 src="/images/MatteoPic.png"
                 alt="matteo-rossi"
-                className="w-full"
+                className="w-full min-w-3xs"
               ></img>
             </div>
             <div className="flex flex-col gap-2.5 sm:order-1 sm:gap-6">
@@ -95,8 +95,8 @@ export default function ChiSiamo() {
                 </p>
               </div>
               <ul className="flex flex-col gap-2.5 text-sm/relaxed sm:grid sm:grid-cols-2 sm:gap-6">
-                <li className="gap-2.5flex flex items-center gap-2.5">
-                  <CircleSmall className="text-primary" />
+                <li className="gap-2.5flex flex gap-2.5 transition delay-75 hover:scale-105">
+                  <Award className="text-primary" />
                   <div className="flex flex-col">
                     <h3 className="font-bold">
                       Laurea triennale in Fisioterapia
@@ -106,15 +106,15 @@ export default function ChiSiamo() {
                     </h3>
                   </div>
                 </li>
-                <li className="flex items-center gap-2.5">
-                  <CircleSmall className="text-primary" />
+                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
+                  <Award className="text-primary" />
                   <div className="flex flex-col">
                     <h3 className="font-bold">Corso di Dry Needling</h3>
                     <h3 className="text-brownish">PhisioVit</h3>
                   </div>
                 </li>
-                <li className="flex items-center gap-2.5">
-                  <CircleSmall className="text-primary" />
+                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
+                  <Award className="text-primary" />
                   <div className="flex flex-col">
                     <h3 className="font-bold">Corso di Taping sportivo</h3>
                     <h3 className="text-brownish">
@@ -126,13 +126,13 @@ export default function ChiSiamo() {
             </div>
           </div>
         </article>
-        <article className="mx-4 mt-24 flex justify-center">
+        <article className="mx-4 flex justify-center sm:mt-20">
           <div className="flex w-6xl flex-col items-center gap-6 rounded-xl bg-white p-4 sm:flex-row sm:gap-9 sm:px-20 sm:py-16">
             <div className="w-full">
               <img
                 src="/images/MariannaPic.png"
                 alt="marianna-gorle"
-                className="w-full"
+                className="w-full min-w-3xs"
               ></img>
             </div>
             <div className="flex flex-col gap-2.5 sm:order-1 sm:gap-6">
@@ -148,8 +148,8 @@ export default function ChiSiamo() {
                 </p>
               </div>
               <ul className="flex flex-col gap-2.5 text-sm/relaxed sm:grid sm:grid-cols-2 sm:gap-6">
-                <li className="flex items-center gap-2.5">
-                  <CircleSmall className="text-primary" />
+                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
+                  <Award className="text-primary" />
                   <div className="flex flex-col">
                     <h3 className="font-bold">
                       Laurea triennale in Fisioterapia
@@ -159,15 +159,15 @@ export default function ChiSiamo() {
                     </h3>
                   </div>
                 </li>
-                <li className="flex items-center gap-2.5">
-                  <CircleSmall className="text-primary" />
+                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
+                  <Award className="text-primary" />
                   <div className="flex flex-col">
                     <h3 className="font-bold">Corso di Dry Needling</h3>
                     <h3 className="text-brownish">PhisioVit</h3>
                   </div>
                 </li>
-                <li className="flex items-center gap-2.5">
-                  <CircleSmall className="text-primary" />
+                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
+                  <Award className="text-primary" />
                   <div className="flex flex-col">
                     <h3 className="font-bold">Corso di Taping sportivo</h3>
                     <h3 className="text-brownish">
@@ -180,7 +180,7 @@ export default function ChiSiamo() {
           </div>
         </article>
       </section>
-      <section className="mt-24 hidden justify-center sm:flex">
+      <section className="mt-20 hidden justify-center sm:flex">
         <div className="flex w-6xl items-center rounded-xl bg-white p-16">
           <div className="flex flex-col items-center gap-8">
             <h2 className="text-center text-5xl font-bold">
@@ -192,7 +192,7 @@ export default function ChiSiamo() {
               rispondere alle tue domande e guidarti nel tuo primo passo verso
               la guarigione.
             </p>
-            <div>
+            <div className="flex gap-4">
               <Button className="w-fit px-7">Contattaci</Button>
               <Button className="bg-white">
                 <span className="font-bold text-black">

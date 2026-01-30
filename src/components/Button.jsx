@@ -1,9 +1,17 @@
-import { cn } from '@/utils/cn';
+import { cn } from "@/utils/cn";
 
-const Button = ({ size = 'md', children, className }) => {
-  // cn is used to "sum" classNames conditionally
-  // Here we say that if size prop is 'sm', then add the className 'text-sm'
-  return <button className={cn('bg-primary text-white px-4 text-base py-3 cursor-pointer rounded-md', size === 'sm' && 'text-sm', className)}> {children}</button>;
+const Button = ({ size = "md", children, className }) => {
+  return (
+    <a
+      className={cn(
+        "bg-primary hover:bg-primary-background hover:text-primary cursor-pointer rounded-md px-4 py-3 text-base text-white transition duration-100 ease-in-out hover:scale-105",
+        size === "sm" && "text-sm",
+        className,
+      )}
+    >
+      {children}
+    </a>
+  );
 };
 
 export default Button;

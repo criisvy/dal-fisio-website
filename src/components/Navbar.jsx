@@ -1,50 +1,104 @@
+"use client";
 import Link from "next/link";
 import Button from "./Button";
 import { Badge, Menu, Phone, XIcon } from "lucide-react";
+import WhatsAppIcon from "@/icons/WhatsappIcon";
+import FacebookIcon from "@/icons/FacebookIcon";
+import InstagramIcom from "@/icons/InstagramIcon";
+import { useState } from "react";
+import { cn } from "@/utils/cn";
 
-const Navbar = () => {
+const Navbar = (open, onOpenChange) => {
   return (
     <nav
-      className="sm:bg-background text-foreground group data-[open=true]:bg-primary mx-auto data-[open=true]:flex-col flex  max-w-7xl  bg-white p-4 font-bold shadow-sm data-[open=true]:fixed data-[open=true]:inset-0 sm:shadow-none"
-      data-open={false}
+      className={cn(
+        open
+          ? "sm:bg-background text-foreground mx-auto flex max-w-7xl items-center bg-white p-4 font-bold shadow-sm sm:shadow-none"
+          : "bg-primary fixed inset-0 flex-col",
+      )}
     >
-      <div className="group-data-[open=true]:flex group-data-[open=true]:justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <Badge className="w-6 group-data-[open=true]:text-white" />
-          <h1 className="text-lg group-data-[open=true]:text-white">
-            Dal Fisio
-          </h1>
+      <div
+        className={cn(
+          open
+            ? "transition-shadow"
+            : "flex w-full justify-between hover:scale-105",
+        )}
+      >
+        <Link
+          href="/"
+          className={cn(open ? "flex items-center gap-2" : "justify-between")}
+        >
+          <Badge
+            className={cn(open ? "w-6" : "hover:text-primary text-white")}
+          />
+          <h1 className={cn(open ? "text-lg" : "text-white")}>Dal Fisio</h1>
         </Link>
-        <XIcon className="hidden group-data-[open=true]:block group-data-[open=true]:size-9 group-data-[open=true]:text-white"></XIcon>
+        <XIcon
+          className={cn(open ? "hidden" : "block size-9 text-white")}
+        ></XIcon>
       </div>
-      <div className="hidden ml-auto items-center group-data-[open=true]:flex-col group-data-[open=true]:gap-12 sm:flex">
-        <ul className="mr-9 flex gap-9 group-data-[open=true]:flex-col group-data-[open=true]:gap-12">
-          <li className="group-data-[open=true]:text-4xl group-data-[open=true]:text-white">
-            <Link href="services">Servizi</Link>
+      <div
+        className={cn(
+          open
+            ? "ml-auto hidden items-center sm:flex"
+            : "mr-auto ml-auto block flex-col justify-center gap-12",
+        )}
+      >
+        <ul className={cn(open ? "mr-9 flex gap-9" : "flex-col gap-12")}>
+          <li className={cn(open ? "hover:scale-105" : "text-4xl text-white")}>
+            <Link href="/servizi">
+              <span className="transition-shadow">Servizi</span>
+            </Link>
           </li>
-          <li className="group-data-[open=true]:text-4xl group-data-[open=true]:text-white">
+          <li className={cn(open ? "hover:scale-105" : "text-4xl text-white")}>
             <Link href="/chi-siamo">Chi siamo</Link>
           </li>
-          <li className="group-data-[open=true]:text-4xl group-data-[open=true]:text-white">
+          <li className={cn(open ? "hover:scale-105" : "text-4xl text-white")}>
             <Link href="/spazi">Spazi</Link>
           </li>
-          <li className="group-data-[open=true]:text-4xl group-data-[open=true]:text-white">
-            <Link href="/contatti" className="">Contatti</Link>
+          <li className={cn(open ? "hover:scale-105" : "text-4xl text-white")}>
+            <Link href="/contatti" className="">
+              Contatti
+            </Link>
           </li>
         </ul>
         <Button
           size="sm"
-          className="flex items-center gap-2 group-data-[open=true]:gap-3.5 group-data-[open=true]:rounded-2xl group-data-[open=true]:border-4"
+          className={cn(
+            open
+              ? "flex items-center gap-2 rounded-xl"
+              : "hidden rounded-2xl border-4",
+          )}
         >
-          <Phone className="h-5 w-5 group-data-[open=true]:size-7" />
-          <span className="group-data-[open=true]:text-4xl group-data-[open=true]:text-white">
-            Contattaci{" "}
+          <Phone className={cn(open ? "h-5 w-5" : "size-7")} />
+          <span className={cn(open ? "" : "text-4xl text-white")}>
+            Contattaci
+          </span>
+        </Button>
+        <Button
+          size="sm"
+          className={cn(
+            open
+              ? "mt-9 hidden items-center gap-2 rounded-xl"
+              : "flex gap-3.5 rounded-2xl border-4",
+          )}
+        >
+          <Phone className={cn(open ? "h-5 w-5" : "size-7")} />
+          <span className={cn(open ? "" : "text-4xl text-white")}>
+            345 090 6595
           </span>
         </Button>
       </div>
       <button className="text-primary ml-auto block sm:hidden">
-        <Menu />
+        <Menu onClick={onOpenChange} />
       </button>
+      <div
+        className={cn(open ? "hidden w-full justify-center gap-10" : "flex")}
+      >
+        <WhatsAppIcon className="size-8 text-white" />
+        <InstagramIcom className="size-8 text-white" />
+        <FacebookIcon className="size-8 text-white" />
+      </div>
     </nav>
   );
 };
