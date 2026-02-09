@@ -50,7 +50,7 @@ export default function Home() {
 
   console.log(accordionsState);
   return (
-    <main className="mx-auto mt-5 max-w-6xl px-4">
+    <main className="mx-auto mt-5 max-w-7xl px-4">
       <header className="relative">
         <div className="absolute right-0 bottom-0 left-0 flex flex-col gap-5 p-4 pb-9 sm:p-10">
           <h1 className="text-4xl font-bold text-white sm:text-5xl">
@@ -135,12 +135,12 @@ export default function Home() {
           <img
             src="/images/inostriservizi.jpg"
             alt=""
-            className="h-60 w-full rounded-xl object-cover shadow-md md:h-72 lg:absolute lg:top-0 lg:left-0 lg:z-0 lg:h-auto lg:w-3/4"
+            className="h-full w-full rounded-xl object-cover shadow-md md:h-72 lg:absolute lg:top-0 lg:left-0 lg:z-0 lg:h-auto lg:w-3/4"
           />
           <img
             src="/images/inostriservizi3.jpg"
             alt=""
-            className="h-60 w-full rounded-xl object-cover shadow-md md:h-72 lg:absolute lg:right-0 lg:bottom-2 lg:h-auto lg:w-2/3 lg:border-3 lg:border-white"
+            className="h-full w-full rounded-xl object-cover shadow-md md:h-72 lg:absolute lg:right-0 lg:bottom-2 lg:h-auto lg:w-2/3 lg:border-3 lg:border-white"
           />
         </div>
         <Button className="flex w-full items-center justify-center gap-2.5 rounded-xl p-2.5 px-3.5 lg:hidden">
@@ -210,9 +210,9 @@ export default function Home() {
           Cosa dicono di noi?
         </h2>
 
-        <Carousel>
+        <Carousel className="mx-auto w-full max-w-7xl">
           <CarouselContent>
-            <CarouselItem>
+            <CarouselItem className="basis-1/3">
               <Review
                 imageSrc="/images/Avatarexample.jpg"
                 imageAlt=""
@@ -223,7 +223,7 @@ export default function Home() {
               fondamentali per recuperare al meglio."
               ></Review>
             </CarouselItem>
-            <CarouselItem>
+            <CarouselItem className="basis-1/3">
               <Review
                 imageSrc="/images/Avatarexample.jpg"
                 imageAlt=""
@@ -234,7 +234,7 @@ export default function Home() {
               disponibile."
               ></Review>
             </CarouselItem>
-            <CarouselItem>
+            <CarouselItem className="basis-1/3">
               <Review
                 imageSrc="/images/Avatarexample.jpg"
                 imageAlt=""
@@ -243,6 +243,14 @@ export default function Home() {
               spalla ,ora sta benissimo, grazie !! E mia mamma per la frattura
               al polso !! Ottima persona e super professionale!!
               Consigliatissimo , ancora grazie 😃"
+              ></Review>
+            </CarouselItem>
+            <CarouselItem className="basis-1/3">
+              <Review
+                imageSrc="/images/Avatarexample.jpg"
+                imageAlt=""
+                name="Monica Marconi"
+                text="Sono stata da Luca per riabilitazione a seguito di intervento di protesi al ginocchio. Mi sono ripresa ripresa perfettamente grazie alla sua competenza, professionalità e rigore nel seguirmi in un ambiente familiare e ben curato!"
               ></Review>
             </CarouselItem>
           </CarouselContent>

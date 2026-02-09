@@ -4,9 +4,13 @@ import { Star } from "lucide-react";
 
 const Review = ({ imageSrc, imageAlt, name, text }) => {
   return (
-    <div className="flex w-full flex-col gap-7 rounded-xl bg-white p-9">
+    <div className="flex h-full w-fit flex-col gap-7 rounded-xl bg-white p-9">
       <div className="flex gap-4">
-        <img src={imageSrc} alt={imageAlt} className="rounded-full"></img>
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          className="size-16 rounded-full"
+        ></img>
         <div className="flex flex-col gap-3">
           <h3 className="font-bold">{name}</h3>
           <div className="flex">
