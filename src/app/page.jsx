@@ -14,11 +14,9 @@ import {
   BookMarked,
   FlaskConical,
   Plus,
-  Link,
 } from "lucide-react";
 import RoundedIconWrapper from "@/components/RoundedIconWrapper";
-
-import Accordion from "@/components/Accordion";
+import Link from "next/link";
 import CardContainer from "@/components/CardContainer";
 import Review from "@/components/Review";
 import { useState } from "react";
@@ -29,6 +27,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const accordionDefaultState = {
   visita: false,
@@ -50,7 +54,7 @@ export default function Home() {
 
   console.log(accordionsState);
   return (
-    <main className="mx-auto mt-5 max-w-7xl px-4">
+    <main className="mx-auto mt-5 max-w-6xl px-4">
       <header className="relative">
         <div className="absolute right-0 bottom-0 left-0 flex flex-col gap-5 p-4 pb-9 sm:p-10">
           <h1 className="text-4xl font-bold text-white sm:text-5xl">
@@ -209,7 +213,6 @@ export default function Home() {
         <h2 className="mb-7 text-center text-4xl font-bold sm:mb-20 sm:text-5xl">
           Cosa dicono di noi?
         </h2>
-
         <Carousel className="mx-auto w-full max-w-7xl">
           <CarouselContent>
             <CarouselItem className="basis-1/3">
@@ -329,7 +332,8 @@ export default function Home() {
                 ></img>
               </div>
               <Button className="flex w-full items-center justify-center gap-9 rounded-xl sm:w-fit lg:ml-auto">
-                Scopri di piú <MoveRight />
+                <Link href="/chi-siamo">Scopri di piú</Link>
+                <MoveRight />
               </Button>
             </div>
           </div>
@@ -382,56 +386,102 @@ export default function Home() {
           Domande Frequenti
         </h1>
         <div className="flex w-full flex-col gap-2.5 sm:gap-10">
-          <Accordion
-            heading="Cosa devo portare alla prima visita?"
-            text="Per la prima visita è utile portare eventuali referti medici,
-              esami diagnostici e una lista dei sintomi che stai riscontrando.
-              Ti consigliamo inoltre un abbigliamento comodo che permetta di
-              eseguire movimenti e test posturali. In questo modo potremo
-              valutarti in maniera completa e accurata."
-            onOpenChange={() => toggleAccordion("visita")}
-            open={accordionsState.visita}
-          ></Accordion>
-          <Accordion
-            heading="Devo avere dolore per rivolgermi al fisioterapista?"
-            text="Non è necessario avere dolore per iniziare un percorso
-              fisioterapico. Possiamo aiutarti anche in ottica preventiva, per
-              migliorare postura, mobilità o performance sportiva. Intervenire
-              prima che insorga un sintomo ti permette spesso di evitare
-              problemi più complessi in futuro."
-            onOpenChange={() => toggleAccordion("dolore")}
-            open={accordionsState.dolore}
-          ></Accordion>
-          <Accordion
-            heading="Quanto durano le sedute?"
-            text="La durata di una seduta dipende dal tipo di trattamento
-              necessario. In genere un incontro dura tra i 45 e i 60 minuti, ma
-              alcuni percorsi specifici possono richiedere tempi leggermente
-              diversi. Durante la prima valutazione ti indicheremo la durata più
-              adatta al tuo caso."
-            onOpenChange={() => toggleAccordion("durata")}
-            open={accordionsState.durata}
-          ></Accordion>
-          <Accordion
-            heading="Quante sedute sono necessarie per vedere risultati?"
-            text="Dipende dal tipo di problema e dagli obiettivi del trattamento. In
-              alcuni casi bastano poche sedute per percepire miglioramenti,
-              mentre per situazioni più complesse può essere necessario un
-              percorso più lungo. Dopo la prima valutazione, ti forniremo una
-              stima personalizzata."
-            onOpenChange={() => toggleAccordion("sedute")}
-            open={accordionsState.sedute}
-          ></Accordion>
-          <Accordion
-            heading="Posso continuare ad allenarmi durante il trattamento?"
-            text="Dipende dal tipo di problema e dal piano terapeutico definito. In
-              molti casi è possibile continuare ad allenarsi adattando
-              l’attività, mentre in altri può essere utile una pausa temporanea.
-              Dopo la valutazione iniziale ti daremo indicazioni personalizzate
-              su cosa puoi fare in totale sicurezza."
-            onOpenChange={() => toggleAccordion("allenamenti")}
-            open={accordionsState.allenamenti}
-          ></Accordion>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="font-bold">
+                Quanto durano le sedute?
+              </AccordionTrigger>
+              <AccordionContent className="text-brownish">
+                La prima visita ha una durata di circa 1 ora ed è strutturata in
+                3 momenti principali:
+                <ul className="mt-4 list-disc space-y-2 pl-6">
+                  <li>
+                    <strong>Anamnesi (primo colloquio)</strong> durante la quale
+                    ascoltiamo il paziente che presenterà i suoi disturbi e la
+                    sua richiesta di aiuto. Indaghiamo la manifestazione dei
+                    sintomi e lo stile di vita, e analizziamo eventuali referti
+                    specialistici (visite mediche, indagini strumentali),
+                    discutendone insieme gli esiti
+                  </li>
+                  <li>
+                    <strong>
+                      Esame obiettivo (vera e propria valutazione)
+                    </strong>{" "}
+                    durante la quale somministriamo alcuni test e manovre
+                    specifiche per comprendere nel dettaglio la natura e le
+                    cause dei disturbi
+                  </li>
+                  <li>
+                    <strong>Prima parte del trattamento</strong> in cui
+                    eseguiamo tecniche di terapia manuale, integriamo, se
+                    necessario, terapie strumentali e guidiamo il paziente
+                    nell’esecuzione di alcuni esercizi. Nella maggior parte dei
+                    casi, questi vengono poi prescritti anche per
+                    l’autotrattamento a casa con supporto video (previo
+                    consenso) o in formato scritto.
+                  </li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger className="font-bold">
+                Quante sedute sono necessarie per vedere risultati?
+              </AccordionTrigger>
+              <AccordionContent className="text-brownish">
+                Le sedute successive verranno concordate insieme al paziente.
+                Come descritto in precedenza non esiste un numero standardizzato
+                di sedute: la programmazione dipenderà dalla
+                <strong> condizione del paziente,</strong> dal suo iniziale
+                approccio al problema <strong>(attivo/passivo)</strong> e da
+                altri fattori legati al suo <strong>stile di vita.</strong>{" "}
+                Desideriamo rassicurarti: non proponiamo mai cicli di
+                trattamenti con un numero elevato e predefinito di sedute a
+                scopo commerciale. <strong>La qualità</strong> delle cure e la
+                <strong> soddisfazione</strong> del paziente sono due aspetti
+                fondamentali nella nostra attività.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="font-bold">
+                Cosa devo portare alla prima visita?
+              </AccordionTrigger>
+              <AccordionContent className="text-brownish">
+                Per la prima visita è utile portare eventuali{" "}
+                <strong>referti medici,</strong>{" "}
+                <strong>esami diagnostici</strong> e una{" "}
+                <strong>lista dei sintomi</strong> che stai riscontrando. Ti
+                consigliamo inoltre un abbigliamento comodo che permetta di
+                eseguire movimenti e test posturali. In questo modo potremo
+                valutarti in maniera completa e accurata.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger className="font-bold">
+                Devo avere dolore per rivolgermi al fisioterapista?
+              </AccordionTrigger>
+              <AccordionContent className="text-brownish">
+                <strong>Non è necessario avere dolore</strong> per iniziare un
+                percorso fisioterapico. Possiamo aiutarti anche in ottica
+                preventiva, per migliorare postura, mobilità o performance
+                sportiva. Intervenire prima che insorga un sintomo ti permette
+                spesso di{" "}
+                <strong>evitare problemi più complessi in futuro.</strong>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger className="font-bold">
+                Quante sedute sono necessarie per vedere risultati?
+              </AccordionTrigger>
+              <AccordionContent className="text-brownish">
+                <strong>Dipende</strong> dal <strong>tipo di problema </strong>e
+                dagli <strong>obiettivi</strong> del trattamento. In alcuni casi
+                bastano poche sedute per percepire miglioramenti, mentre per
+                situazioni più complesse può essere necessario un percorso più
+                lungo. Dopo la prima valutazione, ti forniremo una stima
+                personalizzata.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
       <section className="mt-7 flex justify-center sm:mt-24">
