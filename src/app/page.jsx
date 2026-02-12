@@ -215,7 +215,7 @@ export default function Home() {
         </h2>
         <Carousel className="mx-auto w-full max-w-7xl">
           <CarouselContent>
-            <CarouselItem className="basis-1/3">
+            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
               <Review
                 imageSrc="/images/Avatarexample.jpg"
                 imageAlt=""
@@ -226,7 +226,7 @@ export default function Home() {
               fondamentali per recuperare al meglio."
               ></Review>
             </CarouselItem>
-            <CarouselItem className="basis-1/3">
+            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
               <Review
                 imageSrc="/images/Avatarexample.jpg"
                 imageAlt=""
@@ -237,7 +237,7 @@ export default function Home() {
               disponibile."
               ></Review>
             </CarouselItem>
-            <CarouselItem className="basis-1/3">
+            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
               <Review
                 imageSrc="/images/Avatarexample.jpg"
                 imageAlt=""
@@ -248,7 +248,7 @@ export default function Home() {
               Consigliatissimo , ancora grazie 😃"
               ></Review>
             </CarouselItem>
-            <CarouselItem className="basis-1/3">
+            <CarouselItem className="md:basis-1/2 lg:basis-1/3">
               <Review
                 imageSrc="/images/Avatarexample.jpg"
                 imageAlt=""
@@ -257,8 +257,8 @@ export default function Home() {
               ></Review>
             </CarouselItem>
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="hidden sm:flex" />
+          <CarouselNext className="hidden sm:flex" />
         </Carousel>
       </section>
       <section className="sm:bg-background mt-7 rounded-xl bg-white p-4 sm:mt-24">

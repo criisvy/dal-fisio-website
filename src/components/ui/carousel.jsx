@@ -116,10 +116,10 @@ function CarouselContent({ className, ...props }) {
   return (
     <div
       ref={carouselRef}
-      className="w-full overflow-hidden"
+      className="overflow-hidden"
       data-slot="carousel-content"
     >
-      <div className={cn("flex touch-pan-y", className)} {...props} />
+      <div className={cn("flex", className)} {...props} />
     </div>
   );
 }
@@ -145,7 +145,7 @@ function CarouselItem({ className, ...props }) {
 function CarouselPrevious({
   className,
   variant = "outline",
-  size = "icon-sm",
+  size = "icon",
   ...props
 }) {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
@@ -156,7 +156,7 @@ function CarouselPrevious({
       variant={variant}
       size="icon"
       className={cn(
-        "absolute touch-manipulation rounded-full",
+        "absolute rounded-full",
         orientation === "horizontal"
           ? "top-1/2 -left-8 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -175,7 +175,7 @@ function CarouselPrevious({
 function CarouselNext({
   className,
   variant = "outline",
-  size = "icon-sm",
+  size = "icon",
   ...props
 }) {
   const { orientation, scrollNext, canScrollNext } = useCarousel();
@@ -186,7 +186,7 @@ function CarouselNext({
       variant={variant}
       size="icon"
       className={cn(
-        "absolute touch-manipulation rounded-full",
+        "absolute rounded-full",
         orientation === "horizontal"
           ? "top-1/2 -right-12 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
