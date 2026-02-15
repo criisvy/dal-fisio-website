@@ -1,106 +1,149 @@
 "use client";
-import Link from "next/link";
-import Button from "./Button";
+import { useState, useEffect } from "react";
 import { Badge, Menu, Phone, XIcon } from "lucide-react";
 import WhatsAppIcon from "@/icons/WhatsappIcon";
 import FacebookIcon from "@/icons/FacebookIcon";
 import InstagramIcom from "@/icons/InstagramIcon";
-import { useState } from "react";
+import Link from "next/link";
+import Button from "./Button";
 import { cn } from "@/utils/cn";
+import { usePathname } from "next/navigation";
 
-const Navbar = (open, onOpenChange) => {
+export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  function toggleMenu() {
+    setIsMenuOpen((prev) => !prev);
+  }
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth >= 640) {
+        setIsMenuOpen(false);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <nav
-      className={cn(
-        open
-          ? "sm:bg-background text-foreground mx-auto flex max-w-7xl items-center bg-white p-4 font-bold shadow-sm sm:shadow-none"
-          : "bg-primary fixed inset-0 flex-col",
-      )}
-    >
-      <div
-        className={cn(
-          open
-            ? "transition-shadow"
-            : "flex w-full justify-between hover:scale-105",
-        )}
-      >
-        <Link
-          href="/"
-          className={cn(open ? "flex items-center gap-2" : "justify-between")}
-        >
-          <Badge
-            className={cn(open ? "w-6" : "hover:text-primary text-white")}
-          />
-          <h1 className={cn(open ? "text-lg" : "text-white")}>Dal Fisio</h1>
-        </Link>
-        <XIcon
-          className={cn(open ? "hidden" : "block size-9 text-white")}
-        ></XIcon>
-      </div>
-      <div
-        className={cn(
-          open
-            ? "ml-auto hidden items-center sm:flex"
-            : "mr-auto ml-auto block flex-col justify-center gap-12",
-        )}
-      >
-        <ul className={cn(open ? "mr-9 flex gap-9" : "flex-col gap-12")}>
-          <li className={cn(open ? "hover:scale-105" : "text-4xl text-white")}>
+    <header className="w-full">
+      <nav className="mx-auto mt-9 hidden max-w-6xl items-center justify-between px-6 sm:flex">
+        <div className="flex items-center gap-2">
+          <Badge className="size-6" />
+          <h1 className="text-4xl font-bold">Dal Fisio</h1>
+        </div>
+        <ul className="flex items-center gap-9">
+          <li className="font-bold">
             <Link href="/servizi">
               <span className="transition-shadow">Servizi</span>
             </Link>
           </li>
-          <li className={cn(open ? "hover:scale-105" : "text-4xl text-white")}>
+          <li className="font-bold">
             <Link href="/chi-siamo">Chi siamo</Link>
           </li>
-          <li className={cn(open ? "hover:scale-105" : "text-4xl text-white")}>
+          <li className="font-bold">
             <Link href="/spazi">Spazi</Link>
           </li>
-          <li className={cn(open ? "hover:scale-105" : "text-4xl text-white")}>
+          <li className="font-bold">
             <Link href="/contatti" className="">
               Contatti
             </Link>
           </li>
+          <Button
+            className="flex gap-2 rounded-xl font-bold"
+            href="tel:+393450906595"
+          >
+            Chiama
+            <Phone />
+          </Button>
         </ul>
-        <Button
-          size="sm"
-          className={cn(
-            open
-              ? "flex items-center gap-2 rounded-xl"
-              : "hidden rounded-2xl border-4",
-          )}
-        >
-          <Phone className={cn(open ? "h-5 w-5" : "size-7")} />
-          <span className={cn(open ? "" : "text-4xl text-white")}>
-            Contattaci
-          </span>
-        </Button>
-        <Button
-          size="sm"
-          className={cn(
-            open
-              ? "mt-9 hidden items-center gap-2 rounded-xl"
-              : "flex gap-3.5 rounded-2xl border-4",
-          )}
-        >
-          <Phone className={cn(open ? "h-5 w-5" : "size-7")} />
-          <span className={cn(open ? "" : "text-4xl text-white")}>
-            345 090 6595
-          </span>
-        </Button>
-      </div>
-      <button className="text-primary ml-auto block sm:hidden">
-        <Menu onClick={onOpenChange} />
-      </button>
-      <div
-        className={cn(open ? "hidden w-full justify-center gap-10" : "flex")}
-      >
-        <WhatsAppIcon className="size-8 text-white" />
-        <InstagramIcom className="size-8 text-white" />
-        <FacebookIcon className="size-8 text-white" />
-      </div>
-    </nav>
+      </nav>
+      {isMenuOpen ? (
+        <div className="bg-primary h-screen w-full p-9">
+          <div className="flex w-full justify-between">
+            <div className="">
+              <Link
+                href="/"
+                className="flex items-center gap-2 sm:justify-between"
+              >
+                <Badge className="w-8 text-white" />
+                <h1 className="text-4xl font-bold text-white sm:text-black">
+                  Dal Fisio
+                </h1>
+              </Link>
+            </div>
+            <button onClick={toggleMenu}>
+              <XIcon className="size-10 text-white" />
+            </button>
+          </div>
+          <nav className="flex flex-col items-center">
+            <ul className="my-52 flex flex-col gap-11">
+              <li className="text-[32px] font-bold text-white">
+                <Link href="/servizi">Servizi</Link>
+              </li>
+              <li className="text-[32px] font-bold text-white">
+                <Link href="/chi-siamo">Chi Siamo</Link>
+              </li>
+              <li className="text-[32px] font-bold text-white">
+                <Link href="/spazi">Spazi</Link>
+              </li>
+              <li className="text-[32px] font-bold text-white">
+                <Link href="/contatti">Contatti</Link>
+              </li>
+              <button
+                className="flex w-fit items-center gap-3 rounded-xl p-3 text-[30px] font-bold text-white outline-3 outline-white"
+                href="tel:+393450906595"
+              >
+                <Phone className="size-6 font-bold" />
+                345 090 6595
+              </button>
+            </ul>
+            <div className="flex gap-9">
+              <a href="#">
+                <WhatsAppIcon className="size-8 text-white" />
+              </a>
+              <a href="#">
+                <FacebookIcon className="size-8 text-white" />
+              </a>
+              <a href="#">
+                <InstagramIcom className="size-8 text-white" />
+              </a>
+            </div>
+          </nav>
+        </div>
+      ) : (
+        <div className="flex w-full max-w-7xl justify-between rounded-xl bg-white p-9 drop-shadow-sm sm:hidden">
+          <div className="">
+            <Link
+              href="/"
+              className="flex items-center gap-2 sm:justify-between"
+            >
+              <Badge className="w-8" />
+              <h1 className="text-4xl font-bold sm:text-black">Dal Fisio</h1>
+            </Link>
+          </div>
+          <button onClick={toggleMenu}>
+            <Menu className="size-8" />
+          </button>
+        </div>
+      )}
+    </header>
   );
-};
-
-export default Navbar;
+}

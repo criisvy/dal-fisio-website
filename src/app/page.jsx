@@ -213,7 +213,7 @@ export default function Home() {
         <h2 className="mb-7 text-center text-4xl font-bold sm:mb-20 sm:text-5xl">
           Cosa dicono di noi?
         </h2>
-        <Carousel className="mx-auto w-full max-w-7xl">
+        <Carousel className="mx-auto w-full">
           <CarouselContent>
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
               <Review
