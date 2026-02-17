@@ -69,7 +69,7 @@ export default function Home() {
               <Phone className="size-6" />
               <span className="font-bold">345 090 6595</span>
             </Button>
-            <Button className="group hover:bg-primary-background flex w-full items-center justify-center gap-2 rounded-xl bg-white p-4 px-5 sm:w-fit">
+            <Button className="group flex w-full items-center justify-center gap-2 rounded-xl bg-white p-4 px-5 hover:bg-white sm:w-fit">
               <WhatsAppIcon className="size-6 text-black" />
               <span className="font-bold text-black">
                 Contattaci su WhatsApp
@@ -130,9 +130,16 @@ export default function Home() {
               </div>
             </li>
           </ul>
-          <Button className="hidden w-fit items-center justify-center gap-2.5 rounded-xl p-2.5 px-3.5 lg:flex">
-            <Link href="/servizi"></Link>Vedi tutti i servizi
-            <MoveRight />
+          <Button
+            asChild
+            className="hidden w-fit items-center justify-center gap-2.5 rounded-xl p-2.5 px-3.5 lg:flex"
+          >
+            <Link href="/servizi">
+              <div className="hidden w-fit items-center justify-center gap-2.5 rounded-xl lg:flex">
+                Vedi tutti i servizi
+                <MoveRight />
+              </div>
+            </Link>
           </Button>
         </div>
         <div className="grid w-full grid-cols-2 justify-center gap-2.5 lg:relative lg:my-auto lg:flex lg:aspect-450/400 lg:w-[500px]">
@@ -147,9 +154,14 @@ export default function Home() {
             className="h-full w-full rounded-xl object-cover shadow-md md:h-72 lg:absolute lg:right-0 lg:bottom-2 lg:h-auto lg:w-2/3 lg:border-3 lg:border-white"
           />
         </div>
-        <Button className="flex w-full items-center justify-center gap-2.5 rounded-xl p-2.5 px-3.5 lg:hidden">
-          Vedi tutti i servizi
-          <MoveRight />
+        <Button
+          asChild
+          className="flex w-full items-center justify-center gap-2.5 rounded-xl p-2.5 px-3.5 lg:hidden"
+        >
+          <Link href="/servizi">
+            Vedi tutti i servizi
+            <MoveRight />
+          </Link>
         </Button>
       </section>
       <section className="mt-7 sm:mt-24">
@@ -263,7 +275,7 @@ export default function Home() {
       </section>
       <section className="sm:bg-background mt-7 rounded-xl bg-white p-4 sm:mt-24">
         <h2 className="mb-7 text-center text-4xl font-bold sm:mb-20 sm:text-5xl">
-          I Nostri Valori
+          Come Lavoriamo
         </h2>
         <div className="flex flex-col gap-16 sm:flex-row">
           <article className="flex gap-4 px-4 sm:px-0">
@@ -271,13 +283,11 @@ export default function Home() {
               <ShieldCheck className="text-primary" />
             </RoundedIconWrapper>
             <div>
-              <h3 className="mb-1 text-lg font-bold">
-                Impegno e cura personalizzata
-              </h3>
+              <h3 className="mb-1 text-lg font-bold">Dolore</h3>
               <p className="text-brownish">
-                Ti dedichiamo tutto il tempo necessario, analizzando a fondo il
-                tuo caso. Il tuo piano è su misura e segue solo i tuoi
-                progressi.
+                Indagare il <strong>dolore</strong> del soggetto:
+                caratteristiche, localizzazione, come è insorto, il suo
+                andamento nelle 24h e da quando è insorto, ecc
               </p>
             </div>
           </article>
@@ -286,10 +296,9 @@ export default function Home() {
               <BookMarked className="text-primary" />
             </RoundedIconWrapper>
             <div>
-              <h3 className="mb-1 text-lg font-bold">Formazione costante</h3>
+              <h3 className="mb-1 text-lg font-bold">Educazione</h3>
               <p className="text-brownish">
-                Siamo sempre un passo avanti. Ci aggiorniamo sulle nuove
-                metodologie globali per offrirti l'eccellenza in fisioterapia.
+                Educazione e spiegazione di cosa sta avvenendo.
               </p>
             </div>
           </article>
@@ -298,10 +307,10 @@ export default function Home() {
               <FlaskConical className="text-primary" />
             </RoundedIconWrapper>
             <div>
-              <h3 className="mb-1 text-lg font-bold">Basato sulla scienza</h3>
+              <h3 className="mb-1 text-lg font-bold">Esercizi</h3>
               <p className="text-brownish">
-                Non lavoriamo per ipotesi. Ogni trattamento e basato sull´ultima
-                ricerca clinica per garantirti un recupero solido e mirato.
+                Favorire l'autogestione tramite <strong>esercizi </strong>
+                "calzati" sulle caratteristiche del soggetto.
               </p>
             </div>
           </article>
@@ -331,7 +340,10 @@ export default function Home() {
                   className="w-24"
                 ></img>
               </div>
-              <Button className="flex w-full items-center justify-center gap-9 rounded-xl sm:w-fit lg:ml-auto">
+              <Button
+                asChild
+                className="flex w-full items-center justify-center gap-9 rounded-xl sm:w-fit lg:ml-auto"
+              >
                 <Link href="/chi-siamo">Scopri di piú</Link>
                 <MoveRight />
               </Button>
@@ -357,9 +369,16 @@ export default function Home() {
             </p>
           </div>
 
-          <Button className="mt-7 ml-auto hidden w-fit items-center gap-2.5 rounded-xl sm:mt-0 sm:flex">
-            Esplora lo studio
-            <MoveRight className="w-10"></MoveRight>
+          <Button
+            asChild
+            className="mt-7 ml-auto hidden w-fit items-center gap-2.5 rounded-xl sm:mt-0 sm:flex"
+          >
+            <Link href="/spazi">
+              <div className="mt-7 ml-auto hidden w-fit items-center gap-2.5 rounded-xl sm:mt-0 sm:flex">
+                Esplora lo studio
+                <MoveRight className="w-10"></MoveRight>
+              </div>
+            </Link>
           </Button>
         </div>
         <div className="flex w-full flex-col gap-2.5 sm:grid sm:grid-cols-2 sm:gap-4 lg:order-1">
@@ -375,9 +394,14 @@ export default function Home() {
           ></img>
         </div>
         <div className="w-full sm:hidden sm:self-end lg:order-2">
-          <Button className="flex w-full items-center justify-center gap-3.5 rounded-xl">
-            Esplora lo studio
-            <MoveRight className="w-10"></MoveRight>
+          <Button
+            asChild
+            className="flex w-full items-center justify-center gap-3.5 rounded-xl"
+          >
+            <Link href="/spazi">
+              Esplora lo studio
+              <MoveRight className="w-10"></MoveRight>
+            </Link>
           </Button>
         </div>
       </section>
@@ -498,15 +522,29 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col items-center gap-4 sm:w-full sm:flex-row sm:justify-center">
-            <Button className="flex w-full items-center justify-center gap-2.5 rounded-xl px-16 font-semibold sm:w-fit">
-              Contattaci
-              <Phone className="size-5"></Phone>
+            <Button
+              asChild
+              className="flex w-full items-center justify-center gap-2.5 rounded-xl px-16 font-semibold sm:w-fit"
+            >
+              <Link href="/contatti">
+                <div className="flex w-full items-center justify-center gap-2.5 rounded-xl font-semibold sm:w-fit">
+                  Contattaci
+                  <Phone className="size-5"></Phone>
+                </div>
+              </Link>
             </Button>
-            <Button className="flex w-full justify-center gap-2.5 rounded-xl bg-white outline-1 outline-black sm:w-fit">
-              <span className="font-bold text-black">
-                Scopri i nostri servizi
-              </span>
-              <MoveRight className="text-black"></MoveRight>
+            <Button
+              asChild
+              className="flex w-full justify-center gap-2.5 rounded-xl bg-white outline-1 outline-black hover:bg-white sm:w-fit"
+            >
+              <Link href="/servizi">
+                <div className="flex w-full justify-center gap-2.5 rounded-xl sm:w-fit">
+                  <span className="font-bold text-black">
+                    Scopri i nostri servizi
+                  </span>
+                  <MoveRight className="text-black"></MoveRight>
+                </div>
+              </Link>
             </Button>
           </div>
         </article>

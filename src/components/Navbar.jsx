@@ -45,10 +45,13 @@ export default function Navbar() {
   return (
     <header className="w-full">
       <nav className="mx-auto mt-9 hidden max-w-6xl items-center justify-between px-6 sm:flex">
-        <div className="flex items-center gap-2">
-          <Badge className="size-6" />
-          <h1 className="text-4xl font-bold">Dal Fisio</h1>
-        </div>
+        <Link href="/">
+          <div className="flex items-center gap-2">
+            <Badge className="size-6" />
+            <h1 className="text-4xl font-bold">Dal Fisio</h1>
+          </div>
+        </Link>
+
         <ul className="flex items-center gap-9">
           <li className="font-bold">
             <Link href="/servizi">
@@ -66,12 +69,13 @@ export default function Navbar() {
               Contatti
             </Link>
           </li>
-          <Button
-            className="flex gap-2 rounded-xl font-bold"
-            href="tel:+393450906595"
-          >
-            Chiama
-            <Phone />
+          <Button className="flex gap-2 rounded-xl font-bold">
+            <a href="tel:3450906595">
+              <div className="flex gap-2 rounded-xl font-bold">
+                Chiama
+                <Phone />
+              </div>
+            </a>
           </Button>
         </ul>
       </nav>
@@ -109,7 +113,7 @@ export default function Navbar() {
               </li>
               <button
                 className="flex w-fit items-center gap-3 rounded-xl p-3 text-[30px] font-bold text-white outline-3 outline-white"
-                href="tel:+393450906595"
+                href="tel:3450906595"
               >
                 <Phone className="size-6 font-bold" />
                 345 090 6595

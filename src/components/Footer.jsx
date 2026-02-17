@@ -22,12 +22,16 @@ const Footer = () => {
             <p className="font-bold">Dott. Matteo Rossi</p>
           </div>
           <div className="">
-            <p className="text-brownish hover:underline">
-              Via San Giovanni, 24 - 24121 <strong>Bergamo (BG)</strong>
-            </p>
-            <p className="text-brownish hover:underline">
-              Tel<strong>+39 035 123 4567</strong>
-            </p>
+            <a href="https://maps.app.goo.gl/dtU2nXjPK79vZJTU7">
+              <p className="text-brownish hover:underline">
+                Via dei Bastazi, 13 - 24126 <strong>Bergamo (BG)</strong>
+              </p>
+            </a>
+            <a className="text-brownish" href="tel:3450906595">
+              <p className="text-brownish hover:underline">
+                Tel<strong> +39 035 123 4567</strong>
+              </p>
+            </a>
             <p className="text-brownish hover:underline">
               Email <strong>info@fisiobergamo.it</strong>
             </p>

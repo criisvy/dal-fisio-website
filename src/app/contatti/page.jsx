@@ -27,7 +27,10 @@ export default function Contatti() {
             <ul className="mr-auto flex w-full flex-col justify-center gap-6 px-4">
               <li className="sm:bg-background flex cursor-pointer justify-center gap-1 rounded-xl bg-white p-4 sm:justify-start">
                 <MapPin className="text-primary font-bold" />
-                <a className="text-brownish underline">
+                <a
+                  className="text-brownish underline"
+                  href="https://maps.app.goo.gl/dtU2nXjPK79vZJTU7"
+                >
                   Via dei Bastazi, 13 24126 Bergamo BG
                 </a>
               </li>
@@ -41,9 +44,11 @@ export default function Contatti() {
                 <Mail className="text-primary font-bold" />
                 <a className="text-brownish underline">info@dalfisio.it</a>
               </li>
-              <Button className="bg-whatsapp flex w-full items-center justify-center gap-2 sm:w-fit">
-                <WhatsAppIcon className="h-5 w-5 text-white"></WhatsAppIcon>Chat
-                on WhatsApp
+              <Button className="bg-whatsapp hover:bg-whatsapp flex w-full items-center justify-center gap-2 sm:w-fit">
+                <WhatsAppIcon className="h-5 w-5 text-white hover:text-white"></WhatsAppIcon>
+                <span className="text-white hover:text-white">
+                  Chat on WhatsApp
+                </span>
               </Button>
             </ul>
           </div>

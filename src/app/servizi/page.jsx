@@ -1,6 +1,7 @@
 import Button from "@/components/Button";
 import { MoveRight, User } from "lucide-react";
 import Card from "@/components/Card";
+import Link from "next/link";
 
 const ServicesPage = () => {
   return (
@@ -17,8 +18,11 @@ const ServicesPage = () => {
               paziente.
             </p>
             <div className="flex w-full items-center">
-              <Button className="w-full rounded-xl px-6 text-center sm:w-fit">
-                Contattaci
+              <Button
+                asChild
+                className="w-full rounded-xl px-6 text-center sm:w-fit"
+              >
+                <Link href="/contatti">Contattaci</Link>
               </Button>
             </div>
           </div>
@@ -44,26 +48,26 @@ const ServicesPage = () => {
           <Card
             imageSrc="/images/Knee.png"
             imageAlt=""
-            heading="Riabilitazione post-chirurgica"
-            text="Programmi personalizzati per ripristinare mobilità, forza e
-              funzione dopo un intervento chirurgico, garantendo un recupero
-              sicuro ed efficace."
+            heading="Valutazione fisioterapica"
+            text="Ogni percorso inizia con una valutazione approfondita: analisi del dolore, della postura, del movimento e delle capacità funzionali. Questo ci permette di individuare le cause del problema e definire obiettivi chiari e realistici."
           ></Card>
           <Card
             imageSrc="/images/Knee2.png"
             imageAlt=""
-            heading="Riabilitazione post-traumatica e sportiva"
-            text="Piani di recupero dedicati ad atleti e a chi si riprende da
-              infortuni muscolari o articolari, per un ritorno rapido e sicuro
-              all'attività."
+            heading="Riabilitazione ortopedica"
+            text="Ci occupiamo del trattamento di infortuni muscolo-scheletrici e condizioni post-chirurgiche che coinvolgono spalla, ginocchio, anca e colonna vertebrale. Il percorso riabilitativo è progressivo e orientato al recupero funzionale e al ritorno alle attività quotidiane, lavorative e sportive."
           ></Card>
           <Card
             imageSrc="/images/TwoWoman.png"
             imageAlt=""
-            heading="Riabilitazione per dolori muscolo-scheletrici"
-            text="Trattamenti mirati per dolori acuti o cronici dovuti a problemi
-              posturali, sovraccarico o stress. Riduciamo il dolore e
-              miglioriamo la qualità della tua vita."
+            heading="Riabilitazione sportiva"
+            text="Un servizio dedicato ad atleti e persone attive. Lavoriamo sul recupero dall’infortunio, sulla prevenzione delle recidive e sul ritorno alla performance, integrando esercizio terapeutico, controllo del carico e lavoro funzionale specifico."
+          ></Card>
+          <Card
+            imageSrc="/images/TwoWoman.png"
+            imageAlt=""
+            heading="Riabilitazione neurologica"
+            text="Ci occupiamo della presa in carico di persone con patologie neurologiche centrali e periferiche, come ictus, lesioni midollari e malattie neurodegenerative. Il percorso è finalizzato al miglioramento delle autonomie, del controllo motorio, dell’equilibrio e della qualità di vita, attraverso un lavoro individualizzato e centrato sulla persona."
           ></Card>
         </div>
       </section>
@@ -77,18 +81,28 @@ const ServicesPage = () => {
         </div>
         <div className="flex flex-wrap justify-center gap-5 sm:gap-18">
           <Card
-            imageSrc="/images/Tecar.png"
+            imageSrc="/images/Phisiotherapist4.png"
             imageAlt=""
-            heading="Tecar Terapia"
-            text="Stimola la rigenerazione tissutale e riduce infiammazione e
-              dolore, accelerando il recupero in modo non invasivo."
+            heading="Terapia manuale"
+            text="Utilizziamo tecniche di terapia manuale per ridurre il dolore, migliorare la mobilità articolare e favorire il recupero dei tessuti, sempre integrate a un programma attivo di esercizi."
           ></Card>
           <Card
             imageSrc="/images/Phisiotherapist4.png"
             imageAlt=""
-            heading="Laser Terapia"
-            text="Favorisce la guarigione accelerando i processi biologici naturali
-              di recupero, con un'azione antinfiammatoria e analgesica."
+            heading="Crioterapia compressiva"
+            text="All’interno dei percorsi riabilitativi utilizziamo una tecnologia di crioterapia associata a compressione intermittente. È indicata soprattutto nelle fasi post-operatorie e post-infortunio per il controllo di dolore, edema e infiammazione. L’applicazione è sempre guidata dal fisioterapista integrate nel percorso di cura."
+          ></Card>
+          <Card
+            imageSrc="/images/Phisiotherapist4.png"
+            imageAlt=""
+            heading="Prevenzione e rieducazione al movimento"
+            text="Aiutiamo a prevenire infortuni e sovraccarichi attraverso programmi di educazione al movimento, correzione degli schemi motori e gestione del carico, sia per sportivi che per la vita quotidiana."
+          ></Card>
+          <Card
+            imageSrc="/images/Phisiotherapist4.png"
+            imageAlt=""
+            heading="Trattamenti personalizzati"
+            text="Ogni persona è diversa: per questo non esistono protocolli standard. Ogni intervento è costruito su misura, con un approccio basato sulle evidenze scientifiche e sull’ascolto attivo del paziente."
           ></Card>
         </div>
       </section>
@@ -138,8 +152,12 @@ const ServicesPage = () => {
                 </p>
               </div>
               <Button className="flex w-full justify-center gap-9 rounded-xl pl-7 sm:w-fit">
-                Scopri i nostri spazi
-                <MoveRight />
+                <Link href="/servizi">
+                  <div className="flex w-full justify-center gap-9 rounded-xl sm:w-fit">
+                    Scopri i nostri spazi
+                    <MoveRight />
+                  </div>
+                </Link>
               </Button>
             </div>
           </div>

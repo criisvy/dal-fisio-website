@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
-import { CircleSmall, Award } from "lucide-react";
+import { CircleSmall, Award, MoveRight } from "lucide-react";
+import Link from "next/link";
 
 export default function ChiSiamo() {
   return (
@@ -34,35 +35,45 @@ export default function ChiSiamo() {
                 </p>
               </div>
               <ul className="flex flex-col gap-2.5 text-sm/relaxed sm:grid sm:grid-cols-2 sm:gap-6">
-                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
-                  <Award className="text-primary" />
+                <li className="flex gap-2.5 transition delay-75">
+                  <div className="size-6">
+                    <Award className="text-primary size-full" />
+                  </div>
+                  <div className="flex flex-col">
+                    <h3 className="font-bold">Laurea in Fisioterapia</h3>
+                    <h3 className="text-brownish">
+                      Università Vita Salute San Raffaele
+                    </h3>
+                  </div>
+                </li>
+                <li className="flex gap-2.5">
+                  <div className="size-6">
+                    <Award className="text-primary size-full" />
+                  </div>
                   <div className="flex flex-col">
                     <h3 className="font-bold">
-                      Laurea triennale in Fisioterapia
+                      Master in Riabilitazione dei Disordini Muscolo-Scheletrici
                     </h3>
                     <h3 className="text-brownish">
-                      Università degli Studi di Bergamo
+                      Università degli Studi di Genova
                     </h3>
                   </div>
                 </li>
-                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
-                  <Award className="text-primary" />
-                  <div className="flex flex-col">
-                    <h3 className="font-bold">Corso di Dry Needling</h3>
-                    <h3 className="text-brownish">PhisioVit</h3>
+                <li className="flex gap-2.5">
+                  <div className="size-6">
+                    <Award className="text-primary size-full" />
                   </div>
-                </li>
-                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
-                  <Award className="text-primary" />
                   <div className="flex flex-col">
-                    <h3 className="font-bold">Corso di Taping sportivo</h3>
+                    <h3 className="font-bold">Titolo internazionale di OMPT</h3>
                     <h3 className="text-brownish">
-                      Accademia Italiana Massaggi
+                      Università degli Studi di Genova
                     </h3>
                   </div>
                 </li>
-                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
-                  <Award className="text-primary" />
+                <li className="flex gap-2.5">
+                  <div className="size-6">
+                    <Award className="text-primary size-full" />
+                  </div>
                   <div className="flex flex-col">
                     <h3 className="font-bold">
                       Corso Advanced di Tecniche Manuali
@@ -87,39 +98,50 @@ export default function ChiSiamo() {
               <div className="flex flex-col gap-2.5 sm:gap-6">
                 <h2 className="text-2xl font-bold">Matteo Rossi</h2>
                 <p className="text-brownish">
-                  Matteo è specializzato nel recupero post-operatorio,
-                  utilizzando tecniche avanzate di terapia manuale per
-                  ripristinare la funzionalità e migliorare la qualità di vita
-                  dei suoi pazienti. È dedicato a creare piani di trattamento
-                  personalizzati per ottenere risultati ottimali.
+                  Matteo è un fisioterapista appassionato di sport e movimento.
+                  Unisce pratica clinica e formazione continua ed è attualmente
+                  masterando in fisioterapia sportiva. Lavora con atleti e
+                  persone attive, costruendo percorsi di riabilitazione su
+                  misura. Crede nell’esercizio, nella prevenzione e in un
+                  approccio basato sull’evidenza. Obiettivo? Aiutarti a muoverti
+                  meglio, tornare in campo e dare il massimo, in sicurezza.
                 </p>
               </div>
               <ul className="flex flex-col gap-2.5 text-sm/relaxed sm:grid sm:grid-cols-2 sm:gap-6">
-                <li className="gap-2.5flex flex gap-2.5 transition delay-75 hover:scale-105">
-                  <Award className="text-primary" />
+                <li className="gap-2.5flex flex gap-2.5">
+                  <div className="size-6">
+                    <Award className="text-primary size-full" />
+                  </div>
                   <div className="flex flex-col">
                     <h3 className="font-bold">
                       Laurea triennale in Fisioterapia
                     </h3>
                     <h3 className="text-brownish">
-                      Università degli Studi di Bergamo
+                      Università degli Studi di Milano
                     </h3>
                   </div>
                 </li>
-                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
-                  <Award className="text-primary" />
+                <li className="flex gap-2.5">
+                  <div className="size-6">
+                    <Award className="text-primary size-full" />
+                  </div>
                   <div className="flex flex-col">
-                    <h3 className="font-bold">Corso di Dry Needling</h3>
-                    <h3 className="text-brownish">PhisioVit</h3>
+                    <h3 className="font-bold">
+                      Master in Fisioterapia Applicata allo Sport e alle
+                      Attività Artistiche
+                    </h3>
+                    <h3 className="text-brownish">Università di Siena</h3>
                   </div>
                 </li>
-                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
-                  <Award className="text-primary" />
+                <li className="flex gap-2.5">
+                  <div className="size-6">
+                    <Award className="text-primary size-full" />
+                  </div>
                   <div className="flex flex-col">
-                    <h3 className="font-bold">Corso di Taping sportivo</h3>
-                    <h3 className="text-brownish">
-                      Accademia Italiana Massaggi
+                    <h3 className="font-bold">
+                      Corso "Strenght and Conditioning"
                     </h3>
+                    <h3 className="text-brownish">Fisioscience</h3>
                   </div>
                 </li>
               </ul>
@@ -148,8 +170,10 @@ export default function ChiSiamo() {
                 </p>
               </div>
               <ul className="flex flex-col gap-2.5 text-sm/relaxed sm:grid sm:grid-cols-2 sm:gap-6">
-                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
-                  <Award className="text-primary" />
+                <li className="flex gap-2.5">
+                  <div className="size-6">
+                    <Award className="text-primary size-full" />
+                  </div>
                   <div className="flex flex-col">
                     <h3 className="font-bold">
                       Laurea triennale in Fisioterapia
@@ -159,15 +183,19 @@ export default function ChiSiamo() {
                     </h3>
                   </div>
                 </li>
-                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
-                  <Award className="text-primary" />
+                <li className="flex gap-2.5">
+                  <div className="size-6">
+                    <Award className="text-primary size-full" />
+                  </div>
                   <div className="flex flex-col">
                     <h3 className="font-bold">Corso di Dry Needling</h3>
                     <h3 className="text-brownish">PhisioVit</h3>
                   </div>
                 </li>
-                <li className="flex gap-2.5 transition delay-75 hover:scale-105">
-                  <Award className="text-primary" />
+                <li className="flex gap-2.5">
+                  <div className="size-6">
+                    <Award className="text-primary size-full" />
+                  </div>
                   <div className="flex flex-col">
                     <h3 className="font-bold">Corso di Taping sportivo</h3>
                     <h3 className="text-brownish">
@@ -193,11 +221,20 @@ export default function ChiSiamo() {
               la guarigione.
             </p>
             <div className="flex gap-4">
-              <Button className="w-fit px-7">Contattaci</Button>
-              <Button className="bg-white">
-                <span className="font-bold text-black">
-                  Scopri i nostri servizi →
-                </span>
+              <Button asChild className="w-fit px-7">
+                <Link href="/contatti">Contattaci</Link>
+              </Button>
+
+              <Button
+                asChild
+                className="items-center bg-white font-bold text-black hover:bg-white"
+              >
+                <Link href="/servizi">
+                  <div className="flex gap-4">
+                    Scopri i nostri Servizi
+                    <MoveRight />
+                  </div>
+                </Link>
               </Button>
             </div>
           </div>
