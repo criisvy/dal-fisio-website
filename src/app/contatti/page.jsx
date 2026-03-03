@@ -15,7 +15,7 @@ export default function Contatti() {
               services in Bergamo. Accettiamo solo su prenotazione.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center rounded-xl sm:h-96 sm:w-7xl sm:flex-row sm:gap-8">
+          <div className="w-fit mx-auto flex flex-col items-center justify-center rounded-xl sm:h-96 sm:w-7xl sm:flex-row sm:gap-8">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.89221501422!2d9.654412877534554!3d45.67306407107811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781512214ef3e89%3A0x9b32a78efaef63ce!2sDott.%20Luca%20Gavazzeni%20Fisioterapista!5e0!3m2!1ses!2sit!4v1767890591506!5m2!1ses!2sit"
               width="100%"
@@ -54,7 +54,7 @@ export default function Contatti() {
           </div>
         </article>
       </section>
-      <section className="mt-24 max-w-6xl">
+      <section className="mt-24 sm:max-w-6xl">
         <div className="flex flex-col items-center justify-center gap-12">
           <h2 className="mb-1.5 text-4xl font-bold">Inviaci un mesaggio</h2>
           <div className="flex gap-9">

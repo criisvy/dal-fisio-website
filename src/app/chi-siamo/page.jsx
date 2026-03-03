@@ -26,13 +26,32 @@ export default function ChiSiamo() {
             <div className="flex flex-col gap-2.5 sm:gap-6">
               <div className="flex flex-col gap-2.5 sm:gap-6">
                 <h2 className="text-2xl font-bold">Luca Gavazzeni</h2>
-                <p className="text-brownish">
-                  Luca è appassionato nell’aiutare i pazienti a recuperare da
-                  traumi e infortuni sportivi, adottando un approccio olistico e
-                  basato sulle evidenze scientifiche alla riabilitazione. Il suo
-                  obiettivo è permetterti di tornare alle tue attività con
-                  fiducia.
-                </p>
+                <ul className="text-justify">
+                  <li className="text-brownish">
+                    Nel corso dei primi anni di carriera professionale ho avuto
+                    modo di affinare la mia pratica clinica in vari contesti,
+                    tra cui <strong> poliambulatori </strong>privati, reparti
+                    <strong> ospedalieri, </strong> servizio privato domiciliare
+                    e società sportive professionistiche tra cui
+                    <strong>
+                      {" "}
+                      Atalanta Bergamasca Calcio e Bergamo Basket 2014.{" "}
+                    </strong>
+                  </li>
+                  <li className="text-brownish">
+                    Oltre all’applicazione delle conoscenze specialistiche in
+                    <strong> terapia manuale, </strong>prediligo uno stile
+                    riabilitativo attivo con ampio utilizzo dell’esercizio
+                    terapeutico.
+                  </li>
+                  <li className="text-brownish">
+                    Appassionato <strong> dell’aggiornamento continuo, </strong>
+                    il mio approccio fisioterapico è basato su
+                    <strong> evidenze scientifiche </strong> e su una
+                    valutazione a 360° del paziente secondo il modello
+                    bio-psico-sociale
+                  </li>
+                </ul>
               </div>
               <ul className="flex flex-col gap-2.5 text-sm/relaxed sm:grid sm:grid-cols-2 sm:gap-6">
                 <li className="flex gap-2.5 transition delay-75">
@@ -97,15 +116,30 @@ export default function ChiSiamo() {
             <div className="flex flex-col gap-2.5 sm:order-1 sm:gap-6">
               <div className="flex flex-col gap-2.5 sm:gap-6">
                 <h2 className="text-2xl font-bold">Matteo Rossi</h2>
-                <p className="text-brownish">
-                  Matteo è un fisioterapista appassionato di sport e movimento.
-                  Unisce pratica clinica e formazione continua ed è attualmente
-                  masterando in fisioterapia sportiva. Lavora con atleti e
-                  persone attive, costruendo percorsi di riabilitazione su
-                  misura. Crede nell’esercizio, nella prevenzione e in un
-                  approccio basato sull’evidenza. Obiettivo? Aiutarti a muoverti
-                  meglio, tornare in campo e dare il massimo, in sicurezza.
-                </p>
+                <ul className="text-justify">
+                  <li className="text-brownish">
+                    Sono un fisioterapista specializzato in
+                    <strong> ambito sportivo, </strong>
+                    appassionato di sport e movimento.
+                  </li>
+                  <li className="text-brownish">
+                    Lavoro con atleti e persone attive, costruendo percorsi di
+                    riabilitazione <strong> personalizzata </strong>orientati al
+                    recupero funzionale, alla <strong> prevenzione </strong>
+                    degli infortuni e al <strong> miglioramento </strong>della
+                    performance.
+                  </li>
+                  <li className="text-brownish">
+                    Credo nell’esercizio terapeutico come fulcro del trattamento
+                    e in un approccio <strong> evidence-based, </strong>centrato
+                    sulle esigenze specifiche di ogni paziente.
+                  </li>
+                  <li className="text-brownish">
+                    Il mio obiettivo è aiutarti a muoverti meglio, tornare allo
+                    sport in sicurezza e raggiungere il
+                    <strong> massimo delle tue potenzialità fisiche.</strong>
+                  </li>
+                </ul>
               </div>
               <ul className="flex flex-col gap-2.5 text-sm/relaxed sm:grid sm:grid-cols-2 sm:gap-6">
                 <li className="gap-2.5flex flex gap-2.5">

@@ -159,8 +159,10 @@ export default function Home() {
           className="flex w-full items-center justify-center gap-2.5 rounded-xl p-2.5 px-3.5 lg:hidden"
         >
           <Link href="/servizi">
-            Vedi tutti i servizi
-            <MoveRight />
+            <div className="flex w-full items-center justify-center gap-2.5 rounded-xl lg:hidden">
+              Vedi tutti i servizi
+              <MoveRight />
+            </div>
           </Link>
         </Button>
       </section>
@@ -225,7 +227,7 @@ export default function Home() {
         <h2 className="mb-7 text-center text-4xl font-bold sm:mb-20 sm:text-5xl">
           Cosa dicono di noi?
         </h2>
-        <Carousel className="mx-auto w-full">
+        <Carousel className="justify-center">
           <CarouselContent>
             <CarouselItem className="md:basis-1/2 lg:basis-1/3">
               <Review
@@ -274,43 +276,58 @@ export default function Home() {
         </Carousel>
       </section>
       <section className="sm:bg-background mt-7 rounded-xl bg-white p-4 sm:mt-24">
-        <h2 className="mb-7 text-center text-4xl font-bold sm:mb-20 sm:text-5xl">
-          Come Lavoriamo
-        </h2>
-        <div className="flex flex-col gap-16 sm:flex-row">
-          <article className="flex gap-4 px-4 sm:px-0">
-            <RoundedIconWrapper className="mt-1">
+        <div className="flex flex-col items-center gap-2.5 text-center lg:gap-8">
+          <h2 className="text-center text-4xl font-bold sm:text-5xl">
+            Come Lavoriamo
+          </h2>
+          <p className="text-brownish">
+            Il nostro approccio al trattamento fisioterapico
+          </p>
+        </div>
+        <div className="mt-7 flex flex-col gap-16 sm:mt-18 sm:flex-row">
+          <article className="flex flex-1/3 flex-col gap-4 px-4 sm:px-0">
+            <RoundedIconWrapper className="mt-1 w-full gap-2">
               <ShieldCheck className="text-primary" />
-            </RoundedIconWrapper>
-            <div>
-              <h3 className="mb-1 text-lg font-bold">Dolore</h3>
-              <p className="text-brownish">
-                Indagare il <strong>dolore</strong> del soggetto:
-                caratteristiche, localizzazione, come è insorto, il suo
-                andamento nelle 24h e da quando è insorto, ecc
-              </p>
-            </div>
-          </article>
-          <article className="flex gap-4 px-4 sm:px-0">
-            <RoundedIconWrapper className="mt-1">
-              <BookMarked className="text-primary" />
-            </RoundedIconWrapper>
-            <div>
               <h3 className="mb-1 text-lg font-bold">Educazione</h3>
-              <p className="text-brownish">
-                Educazione e spiegazione di cosa sta avvenendo.
+            </RoundedIconWrapper>
+            <div>
+              <p className="text-brownish text-justify">
+                Spiego in modo chiaro cosa sta accadendo al corpo, aiutando il
+                paziente a <strong>comprendere </strong>l’origine del dolore e i
+                meccanismi coinvolti. La <strong>consapevolezza </strong>è il
+                primo passo verso il recupero.
               </p>
             </div>
           </article>
-          <article className="flex gap-4 px-4 sm:px-0">
-            <RoundedIconWrapper className="mt-1">
-              <FlaskConical className="text-primary" />
+          <article className="flex flex-1/3 flex-col gap-4 px-4 sm:px-0">
+            <RoundedIconWrapper className="mt-1 w-full gap-2">
+              <ShieldCheck className="text-primary" />
+              <h3 className="mb-1 text-lg font-bold">Dolore</h3>
+            </RoundedIconWrapper>
+            <div className="">
+              <p className="text-brownish text-justify">
+                Indago le caratteristiche del <strong>dolore: </strong>
+                localizzazione, intensità, modalità di insorgenza, andamento
+                nelle 24 ore e <strong>durata nel tempo. </strong>Questa fase è
+                essenziale per individuare la causa del problema e definire il
+                percorso terapeutico più <strong>efficace.</strong>
+              </p>
+            </div>
+          </article>
+          <article className="flex flex-1/3 flex-col gap-4 px-4 sm:px-0">
+            <RoundedIconWrapper className="mt-1 w-full gap-2">
+              <ShieldCheck className="text-primary" />
+              <h3 className="mb-1 text-lg font-bold">
+                Esercizi personalizatti
+              </h3>
             </RoundedIconWrapper>
             <div>
-              <h3 className="mb-1 text-lg font-bold">Esercizi</h3>
-              <p className="text-brownish">
-                Favorire l'autogestione tramite <strong>esercizi </strong>
-                "calzati" sulle caratteristiche del soggetto.
+              <p className="text-brownish text-justify">
+                Propongo esercizi terapeutici <strong>su misura, </strong>
+                <strong>adattati </strong>alle caratteristiche e agli obiettivi
+                del paziente, per favorire l’autonomia,{" "}
+                <strong>prevenire </strong>ricadute e
+                <strong>migliorare </strong>la qualità della vita.
               </p>
             </div>
           </article>

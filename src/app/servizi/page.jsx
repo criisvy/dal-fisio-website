@@ -151,7 +151,10 @@ const ServicesPage = () => {
                   futuri infortuni, consolidando i risultati nel tempo.
                 </p>
               </div>
-              <Button className="flex w-full justify-center gap-9 rounded-xl pl-7 sm:w-fit">
+              <Button
+                asChild
+                className="flex w-full justify-center gap-9 rounded-xl pl-7 sm:w-fit"
+              >
                 <Link href="/servizi">
                   <div className="flex w-full justify-center gap-9 rounded-xl sm:w-fit">
                     Scopri i nostri spazi
