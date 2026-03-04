@@ -111,7 +111,7 @@ function Carousel({
 }
 
 function CarouselContent({ className, ...props }) {
-  const { carouselRef } = useCarousel();
+  const { carouselRef, orientation } = useCarousel();
 
   return (
     <div
@@ -119,7 +119,14 @@ function CarouselContent({ className, ...props }) {
       className="overflow-hidden"
       data-slot="carousel-content"
     >
-      <div className={cn("flex", className)} {...props} />
+      <div
+        className={cn(
+          "flex",
+          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+          className,
+        )}
+        {...props}
+      />
     </div>
   );
 }
@@ -154,9 +161,9 @@ function CarouselPrevious({
     <Button
       data-slot="carousel-previous"
       variant={variant}
-      size="icon"
+      size={size}
       className={cn(
-        "absolute rounded-full",
+        "absolute size-8 rounded-full",
         orientation === "horizontal"
           ? "top-1/2 -left-8 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -184,9 +191,9 @@ function CarouselNext({
     <Button
       data-slot="carousel-next"
       variant={variant}
-      size="icon"
+      size={size}
       className={cn(
-        "absolute rounded-full",
+        "absolute size-8 rounded-full",
         orientation === "horizontal"
           ? "top-1/2 -right-12 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",

@@ -15,15 +15,16 @@ export default function Contatti() {
               services in Bergamo. Accettiamo solo su prenotazione.
             </p>
           </div>
-          <div className="w-fit mx-auto flex flex-col items-center justify-center rounded-xl sm:h-96 sm:w-7xl sm:flex-row sm:gap-8">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.89221501422!2d9.654412877534554!3d45.67306407107811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781512214ef3e89%3A0x9b32a78efaef63ce!2sDott.%20Luca%20Gavazzeni%20Fisioterapista!5e0!3m2!1ses!2sit!4v1767890591506!5m2!1ses!2sit"
-              width="100%"
-              height="100%"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+          <div className="translate-y-<0> mx-auto flex w-fit flex-col items-center justify-center rounded-xl sm:h-96 sm:w-7xl sm:flex-row sm:gap-8">
+            <div className="bg-background mb-5 h-full w-full overflow-hidden rounded-md">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.89221501422!2d9.654412877534554!3d45.67306407107811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781512214ef3e89%3A0x9b32a78efaef63ce!2sDott.%20Luca%20Gavazzeni%20Fisioterapista!5e0!3m2!1ses!2sit!4v1767890591506!5m2!1ses!2sit"
+                width="100%"
+                height="100%"
+                className="min-h-[400px] border-0"
+                loading="lazy"
+              ></iframe>
+            </div>
             <ul className="mr-auto flex w-full flex-col justify-center gap-6 px-4">
               <li className="sm:bg-background flex cursor-pointer justify-center gap-1 rounded-xl bg-white p-4 sm:justify-start">
                 <MapPin className="text-primary font-bold" />

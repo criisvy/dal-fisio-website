@@ -2,7 +2,7 @@
 import { cn } from "@/utils/cn";
 import { Star } from "lucide-react";
 
-const Review = ({ imageSrc, imageAlt, name, text }) => {
+const Review = ({ imageSrc, imageAlt, name, text, url }) => {
   return (
     <div className="flex h-full w-fit flex-col gap-7 rounded-xl bg-white p-9">
       <div className="flex gap-4">
