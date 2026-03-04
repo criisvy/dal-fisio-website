@@ -46,10 +46,7 @@ export default function Navbar() {
     <header className="w-full">
       <nav className="mx-auto mt-9 hidden max-w-6xl items-center justify-between px-6 sm:flex">
         <Link href="/">
-          <div className="flex items-center gap-2">
-            <Badge className="size-6" />
-            <h1 className="text-4xl font-bold">Dal Fisio</h1>
-          </div>
+          <img className="w-40" src="/logo/logo-rosso-nero-complete.svg"></img>
         </Link>
 
         <ul className="flex items-center gap-9">

@@ -224,11 +224,8 @@ export default function Home() {
           <h2 className="text-center text-4xl font-bold sm:text-5xl">
             Come Lavoriamo
           </h2>
-          <p className="text-brownish">
-            Il nostro approccio al trattamento fisioterapico
-          </p>
         </div>
-        <div className="mt-7 flex flex-col gap-16 sm:mt-18 sm:flex-row">
+        <div className="mt-7 flex flex-col gap-16 sm:mt-18 sm:grid sm:grid-cols-2">
           <article className="flex flex-1/3 flex-col gap-4 px-4 sm:px-0">
             <RoundedIconWrapper className="mt-1 w-full gap-2">
               <ShieldCheck className="text-primary" />
@@ -236,10 +233,10 @@ export default function Home() {
             </RoundedIconWrapper>
             <div>
               <p className="text-brownish text-justify">
-                Spiego in modo chiaro cosa sta accadendo al corpo, aiutando il
-                paziente a <strong>comprendere </strong>l’origine del dolore e i
-                meccanismi coinvolti. La <strong>consapevolezza </strong>è il
-                primo passo verso il recupero.
+                Spieghiamo in modo chiaro cosa sta accadendo al corpo, aiutando
+                il paziente a <strong>comprendere </strong>l’origine del dolore
+                e i meccanismi coinvolti. La <strong>consapevolezza </strong>è
+                il primo passo verso il recupero.
               </p>
             </div>
           </article>
@@ -250,7 +247,7 @@ export default function Home() {
             </RoundedIconWrapper>
             <div className="">
               <p className="text-brownish text-justify">
-                Indago le caratteristiche del <strong>dolore: </strong>
+                Indaghiamo le caratteristiche del <strong>dolore: </strong>
                 localizzazione, intensità, modalità di insorgenza, andamento
                 nelle 24 ore e <strong>durata nel tempo. </strong>Questa fase è
                 essenziale per individuare la causa del problema e definire il
@@ -267,11 +264,29 @@ export default function Home() {
             </RoundedIconWrapper>
             <div>
               <p className="text-brownish text-justify">
-                Propongo esercizi terapeutici <strong>su misura, </strong>
+                Proponiamo esercizi terapeutici <strong>su misura, </strong>
                 <strong>adattati </strong>alle caratteristiche e agli obiettivi
-                del paziente, per favorire l’autonomia,{" "}
+                del paziente, per favorire l’autonomia,
                 <strong>prevenire </strong>ricadute e
                 <strong>migliorare </strong>la qualità della vita.
+              </p>
+            </div>
+          </article>
+          <article className="flex flex-1/3 flex-col gap-4 px-4 sm:px-0">
+            <RoundedIconWrapper className="mt-1 w-full gap-2">
+              <ShieldCheck className="text-primary" />
+              <h3 className="mb-1 text-lg font-bold">Valutazione funzionale</h3>
+            </RoundedIconWrapper>
+            <div>
+              <p className="text-brownish text-justify">
+                Eseguiamo una valutazione
+                <strong> funzionale approfondita </strong> attraverso test
+                specifici di mobilità, forza e controllo motorio. Questo ci
+                permette di individuare
+                <strong> squilibri, limitazioni </strong>e
+                <strong> compensi </strong>, costruendo un piano di fisioterapia
+                personalizzato, efficace e basato sulle
+                <strong> evidenze scientifiche.</strong>
               </p>
             </div>
           </article>

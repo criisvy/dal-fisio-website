@@ -8,12 +8,8 @@ const Footer = () => {
   return (
     <footer className="my-7 flex max-w-7xl flex-col gap-6 rounded-xl bg-white p-4 text-lg sm:mx-auto sm:px-16 sm:py-9">
       <div className="flex flex-col justify-between gap-6 sm:flex-row">
-        <Link
-          href="/"
-          className="flex items-center gap-2 delay-75 hover:scale-110"
-        >
-          <Badge className="text-primary w-6" />
-          <h3 className="font-bold">Dal Fisio</h3>
+        <Link href="/" className="flex items-center gap-2">
+          <img className="w-30" src="/logo/logo-rosso-nero-complete.svg"></img>
         </Link>
         <div className="flex flex-col gap-2.5">
           <div className="flex flex-col">
@@ -87,7 +83,7 @@ const Footer = () => {
       </div>
       <div className="flex justify-center">
         <p className="text-brownish">
-          © 2024 Dal Fisio. Tutti i diritti riservati.
+          © 2026 Dal Fisio. Tutti i diritti riservati.
         </p>
       </div>
     </footer>
