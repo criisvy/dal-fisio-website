@@ -16,7 +16,7 @@ export default function Spazi() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-3 lg:grid md:grid-cols-2 md:items-center md:justify-center md:gap-8">
+          <div className="flex flex-col gap-3 md:grid-cols-2 md:items-center md:justify-center md:gap-8 lg:grid">
             <img
               className="rounded-xl object-cover shadow-md sm:h-[700px]"
               src="/images/spazi1.jpg"
@@ -24,12 +24,12 @@ export default function Spazi() {
             ></img>
             <div className="flex gap-3 sm:flex-col sm:gap-8">
               <img
-                className="h-52 max-w-[275px] rounded-xl shadow-md sm:h-full sm:w-full sm:min-w-[490px]"
+                className="h-52 rounded-xl shadow-md sm:h-full sm:w-full sm:max-w-[275px] sm:min-w-[490px]"
                 src="/images/spaz3.jpeg"
                 alt=""
               ></img>
               <img
-                className="h-52 max-w-[280px] rounded-xl shadow-md sm:h-full sm:w-full sm:min-w-[490px]"
+                className="h-52 rounded-xl shadow-md sm:h-full sm:w-full sm:max-w-[280px] sm:min-w-[490px]"
                 src="/images/spazi4.jpg"
                 alt=""
               ></img>
@@ -49,7 +49,7 @@ export default function Spazi() {
             specifici per garantirti la massima attenzione e privacy.
           </p>
         </div>
-        <div className="flex flex-col gap-5 pt-5 sm:flex-row sm:gap-9 sm:pt-11 lg:flex-wrap lg:justify-center">
+        <div className="flex flex-col gap-5 pt-5 sm:gap-9 sm:pt-11 md:flex-row lg:flex-wrap lg:justify-center">
           <Card
             imageSrc="/images/TerapiaManuale.png"
             imageAlt=""
@@ -78,14 +78,14 @@ export default function Spazi() {
           <h1 className="text-center text-5xl font-bold">
             La Palestra Riabilitativa (In Arrivo)
           </h1>
-          <p className="text-brownish text-center sm:w-3xl">
+          <p className="text-brownish text-center md:w-3xl">
             Il prossimo passo nel tuo percorso di guarigione. Uno spazio ampio e
             luminoso, attrezzato con macchinari isotonici moderni per il
             rinforzo muscolare, l'esercizio funzionale e la prevenzione delle
             recidive, ideale per la riabilitazione sportiva e post-operatoria a
             Bergamo.
           </p>
-          <div className="flex flex-col gap-5 pt-5 sm:flex-row sm:gap-9 sm:pt-11 lg:flex-wrap lg:justify-center">
+          <div className="flex flex-col gap-5 pt-5 sm:gap-9 sm:pt-11 md:flex-row lg:flex-wrap lg:justify-center">
             <Card
               imageSrc="/images/WomanTraining1.png"
               imageAlt=""
