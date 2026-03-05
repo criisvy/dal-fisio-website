@@ -9,6 +9,10 @@ import {
   Bone,
   MoveRight,
   ShieldCheck,
+  BookCheck,
+  Activity,
+  Dumbbell,
+  UserRoundCheck,
 } from "lucide-react";
 import RoundedIconWrapper from "@/components/RoundedIconWrapper";
 import Link from "next/link";
@@ -226,11 +230,11 @@ export default function Home() {
           </h2>
         </div>
         <div className="mt-7 flex flex-col gap-16 sm:mt-18 sm:grid sm:grid-cols-2">
-          <article className="flex flex-1/3 flex-col gap-4 px-4 sm:px-0">
-            <RoundedIconWrapper className="mt-1 w-full gap-2">
-              <ShieldCheck className="text-primary" />
+          <article className="flex flex-1/3 flex-col gap-4 px-4 sm:rounded-2xl sm:bg-white sm:p-6">
+            <div className="flex items-center gap-4 sm:flex-row">
+              <BookCheck className="text-primary size-8 shrink-0 sm:size-12" />
               <h3 className="mb-1 text-lg font-bold">Educazione</h3>
-            </RoundedIconWrapper>
+            </div>
             <div>
               <p className="text-brownish text-justify">
                 Spieghiamo in modo chiaro cosa sta accadendo al corpo, aiutando
@@ -240,12 +244,12 @@ export default function Home() {
               </p>
             </div>
           </article>
-          <article className="flex flex-1/3 flex-col gap-4 px-4 sm:px-0">
-            <RoundedIconWrapper className="mt-1 w-full gap-2">
-              <ShieldCheck className="text-primary" />
+          <article className="flex flex-1/3 flex-col gap-4 px-4 sm:rounded-2xl sm:bg-white sm:p-6">
+            <div className="flex items-center gap-4 sm:flex-row">
+              <Activity className="text-primary size-8 shrink-0 sm:size-12" />
               <h3 className="mb-1 text-lg font-bold">Dolore</h3>
-            </RoundedIconWrapper>
-            <div className="">
+            </div>
+            <div>
               <p className="text-brownish text-justify">
                 Indaghiamo le caratteristiche del <strong>dolore: </strong>
                 localizzazione, intensità, modalità di insorgenza, andamento
@@ -255,13 +259,13 @@ export default function Home() {
               </p>
             </div>
           </article>
-          <article className="flex flex-1/3 flex-col gap-4 px-4 sm:px-0">
-            <RoundedIconWrapper className="mt-1 w-full gap-2">
-              <ShieldCheck className="text-primary" />
+          <article className="flex flex-1/3 flex-col gap-4 px-4 sm:rounded-2xl sm:bg-white sm:p-6">
+            <div className="flex items-center gap-4 sm:flex-row">
+              <Dumbbell className="text-primary size-8 shrink-0 sm:size-12" />
               <h3 className="mb-1 text-lg font-bold">
                 Esercizi personalizatti
               </h3>
-            </RoundedIconWrapper>
+            </div>
             <div>
               <p className="text-brownish text-justify">
                 Proponiamo esercizi terapeutici <strong>su misura, </strong>
@@ -272,11 +276,11 @@ export default function Home() {
               </p>
             </div>
           </article>
-          <article className="flex flex-1/3 flex-col gap-4 px-4 sm:px-0">
-            <RoundedIconWrapper className="mt-1 w-full gap-2">
-              <ShieldCheck className="text-primary" />
+          <article className="flex flex-1/3 flex-col gap-4 px-4 sm:rounded-2xl sm:bg-white sm:p-6">
+            <div className="flex items-center gap-4 sm:flex-row">
+              <UserRoundCheck className="text-primary size-8 shrink-0 sm:size-12" />
               <h3 className="mb-1 text-lg font-bold">Valutazione funzionale</h3>
-            </RoundedIconWrapper>
+            </div>
             <div>
               <p className="text-brownish text-justify">
                 Eseguiamo una valutazione
@@ -309,11 +313,15 @@ export default function Home() {
             </span>
             <div className="flex flex-col gap-3.5 lg:flex-row">
               <div className="flex gap-3">
-                <img src="/images/Atalanta.png" alt="" className="w-7"></img>
                 <img
-                  src="/images/SportSpecialist.png"
+                  src="/images/Atalanta.avif"
                   alt=""
-                  className="w-24"
+                  className="w-10"
+                ></img>
+                <img
+                  src="/images/IstitutoCQ.png"
+                  alt=""
+                  className="w-10"
                 ></img>
               </div>
               <Button

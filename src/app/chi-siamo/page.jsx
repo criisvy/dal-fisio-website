@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import CardContainer from "@/components/CardContainer";
 import { CircleSmall, Award, MoveRight } from "lucide-react";
 import Link from "next/link";
 
@@ -242,6 +243,16 @@ export default function ChiSiamo() {
           </div>
         </article>
       </section>
+      {/* <section>
+        <div>
+          <h1>Abbiamo colaborato</h1>
+          <div className="flex gap-6">
+            <img src="/images/Atalanta.avif" className="w-24"></img>
+            <img src="/images/IstitutoCQ.png" className="w-30"></img>
+            
+          </div>
+        </div>
+      </section> */}
       <section className="mt-20 hidden justify-center sm:flex">
         <div className="flex w-6xl items-center rounded-xl bg-white p-16">
           <div className="flex flex-col items-center gap-8">

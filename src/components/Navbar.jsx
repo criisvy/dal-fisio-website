@@ -80,14 +80,11 @@ export default function Navbar() {
         <div className="bg-primary h-screen w-full p-9">
           <div className="flex w-full justify-between">
             <div className="">
-              <Link
-                href="/"
-                className="flex items-center gap-2 sm:justify-between"
-              >
-                <Badge className="w-8 text-white" />
-                <h1 className="text-4xl font-bold text-white sm:text-black">
-                  Dal Fisio
-                </h1>
+              <Link href="/">
+                <img
+                  className="w-40"
+                  src="/logo/logo-bianco-complete.svg"
+                ></img>
               </Link>
             </div>
             <button onClick={toggleMenu}>
@@ -132,12 +129,11 @@ export default function Navbar() {
       ) : (
         <div className="flex w-full max-w-7xl justify-between rounded-xl bg-white p-9 drop-shadow-sm sm:hidden">
           <div className="">
-            <Link
-              href="/"
-              className="flex items-center gap-2 sm:justify-between"
-            >
-              <Badge className="w-8" />
-              <h1 className="text-4xl font-bold sm:text-black">Dal Fisio</h1>
+            <Link href="/">
+              <img
+                className="w-40"
+                src="/logo/logo-rosso-nero-complete.svg"
+              ></img>
             </Link>
           </div>
           <button onClick={toggleMenu}>
