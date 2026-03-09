@@ -88,8 +88,8 @@ export default function Home() {
           </div>
           <ul className="flex flex-col gap-2.5 md:mb-4 lg:mb-0 lg:gap-5">
             <li className="md:bg-background flex gap-3 rounded-xl bg-white p-4 lg:gap-3.5 lg:p-0">
-              <RoundedIconWrapper className="text-sm">
-                <ShieldPlus className="text-primary" />
+              <RoundedIconWrapper className="bg-primary text-sm">
+                <ShieldPlus className="text-white" />
               </RoundedIconWrapper>
               <div>
                 <h3 className="font-bold">Recupero Post-Chirurgico</h3>
@@ -100,8 +100,8 @@ export default function Home() {
               </div>
             </li>
             <li className="md:bg-background flex gap-3 rounded-xl bg-white p-4 pt-2.5 lg:gap-3.5 lg:p-0">
-              <RoundedIconWrapper className="text-sm">
-                <Volleyball className="text-primary" />
+              <RoundedIconWrapper className="bg-primary text-sm">
+                <Volleyball className="text-white" />
               </RoundedIconWrapper>
               <div>
                 <h3 className="font-bold">Riabilitazione Sportiva</h3>
@@ -112,8 +112,8 @@ export default function Home() {
               </div>
             </li>
             <li className="md:bg-background flex gap-3 rounded-xl bg-white p-4 pt-3 lg:gap-3.5 lg:p-0">
-              <RoundedIconWrapper className="text-sm">
-                <Bone className="text-primary" />
+              <RoundedIconWrapper className="bg-primary text-sm">
+                <Bone className="text-white" />
               </RoundedIconWrapper>
               <div>
                 <h3 className="font-bold">Sollievo del Dolore</h3>
@@ -129,7 +129,7 @@ export default function Home() {
             className="hidden w-fit items-center justify-center gap-2.5 rounded-xl p-2.5 px-3.5 lg:flex"
           >
             <Link href="/servizi">
-              <div className="hidden w-fit items-center justify-center gap-2.5 rounded-xl lg:flex">
+              <div className="hidden w-fit items-center justify-center gap-2.5 rounded-xl font-bold lg:flex">
                 Vedi tutti i servizi
                 <MoveRight />
               </div>
@@ -153,7 +153,7 @@ export default function Home() {
           className="flex w-full items-center justify-center gap-2.5 rounded-xl p-2.5 px-3.5 lg:hidden"
         >
           <Link href="/servizi">
-            <div className="flex w-full items-center justify-center gap-2.5 rounded-xl lg:hidden">
+            <div className="flex w-full items-center justify-center gap-2.5 rounded-xl font-bold lg:hidden">
               Vedi tutti i servizi
               <MoveRight />
             </div>
@@ -320,7 +320,9 @@ export default function Home() {
                 asChild
                 className="flex w-full items-center justify-center gap-9 rounded-xl sm:w-fit lg:ml-auto"
               >
-                <Link href="/chi-siamo">Scopri di piú</Link>
+                <Link href="/chi-siamo" className="font-bold">
+                  Scopri di piú
+                </Link>
                 <MoveRight />
               </Button>
             </div>
@@ -350,7 +352,7 @@ export default function Home() {
             className="mt-7 ml-auto hidden w-fit items-center gap-2.5 rounded-xl sm:mt-0 sm:flex"
           >
             <Link href="/spazi">
-              <div className="mt-7 ml-auto hidden w-fit items-center gap-2.5 rounded-xl sm:mt-0 sm:flex">
+              <div className="mt-7 ml-auto hidden w-fit items-center gap-2.5 rounded-xl font-bold sm:mt-0 sm:flex">
                 Esplora lo studio
                 <MoveRight className="w-10"></MoveRight>
               </div>
@@ -374,7 +376,7 @@ export default function Home() {
             asChild
             className="flex w-full items-center justify-center gap-3.5 rounded-xl"
           >
-            <Link href="/spazi" className="flex gap-2.5">
+            <Link href="/spazi" className="flex gap-2.5 font-bold">
               Esplora lo studio
               <MoveRight className="w-10"></MoveRight>
             </Link>
