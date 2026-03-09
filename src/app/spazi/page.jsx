@@ -1,4 +1,5 @@
 import Card from "@/components/Card";
+import Image from "next/image";
 
 export default function Spazi() {
   return (
@@ -9,31 +10,35 @@ export default function Spazi() {
             <h1 className="text-center text-5xl font-bold sm:text-left">
               I Nostri Spazi: Studio e Palestra
             </h1>
-            <p className="text-brownish text-center">
+            <p className="text-brownish max-w-3xl text-center">
               Ambienti progettati per la tua riabilitazione e il tuo benessere a
               Bergamo, dal trattamento iniziale al recupero completo della
               forza.
             </p>
           </div>
 
-          <div className="flex flex-col gap-3 md:grid-cols-2 md:items-center md:justify-center md:gap-8 lg:grid">
-            <img
-              className="rounded-xl object-cover shadow-md sm:h-[700px]"
+          <div className="mx-auto grid max-h-[550px] max-w-4xl grid-cols-2 grid-rows-2 gap-3 sm:gap-8">
+            <Image
+              width={544}
+              height={758}
+              className="col-span-1 row-span-2 h-full rounded-xl object-cover shadow-md"
               src="/images/spazi1.jpg"
               alt=""
-            ></img>
-            <div className="flex gap-3 sm:flex-col sm:gap-8">
-              <img
-                className="h-52 rounded-xl shadow-md sm:h-full sm:w-full sm:max-w-[275px] sm:min-w-[490px]"
-                src="/images/spaz3.jpeg"
-                alt=""
-              ></img>
-              <img
-                className="h-52 rounded-xl shadow-md sm:h-full sm:w-full sm:max-w-[280px] sm:min-w-[490px]"
-                src="/images/spazi4.jpg"
-                alt=""
-              ></img>
-            </div>
+            />
+            <Image
+              width={544}
+              height={362}
+              className="h-full rounded-xl object-cover shadow-md"
+              src="/images/spaz3.jpeg"
+              alt=""
+            />
+            <Image
+              width={544}
+              height={362}
+              className="h-full rounded-xl object-cover shadow-md"
+              src="/images/spazi4.jpg"
+              alt=""
+            />
           </div>
         </div>
       </section>
@@ -42,14 +47,14 @@ export default function Spazi() {
           <h1 className="text-center text-5xl font-bold sm:text-left">
             Lo Studio Fisioterapico
           </h1>
-          <p className="text-brownish text-center sm:w-3xl">
+          <p className="text-brownish max-w-3xl text-center">
             Il cuore della nostra clinica, dove ogni percorso di recupero
             inizia. Uno spazio privato, tranquillo e moderno, dedicato alle
             valutazioni iniziali, alle terapie manuali e ai trattamenti
             specifici per garantirti la massima attenzione e privacy.
           </p>
         </div>
-        <div className="flex flex-col gap-5 pt-5 sm:gap-9 sm:pt-11 md:flex-row lg:flex-wrap lg:justify-center">
+        <div className="mt-11 flex flex-wrap justify-center gap-4 sm:gap-8">
           <Card
             imageSrc="/images/TerapiaManuale.png"
             imageAlt=""
@@ -78,14 +83,14 @@ export default function Spazi() {
           <h1 className="text-center text-5xl font-bold">
             La Palestra Riabilitativa (In Arrivo)
           </h1>
-          <p className="text-brownish text-center md:w-3xl">
+          <p className="text-brownish max-w-3xl text-center">
             Il prossimo passo nel tuo percorso di guarigione. Uno spazio ampio e
             luminoso, attrezzato con macchinari isotonici moderni per il
             rinforzo muscolare, l'esercizio funzionale e la prevenzione delle
             recidive, ideale per la riabilitazione sportiva e post-operatoria a
             Bergamo.
           </p>
-          <div className="flex flex-col gap-5 pt-5 sm:gap-9 sm:pt-11 md:flex-row lg:flex-wrap lg:justify-center">
+          <div className="mt-11 flex flex-wrap justify-center gap-4 sm:gap-8">
             <Card
               imageSrc="/images/WomanTraining1.png"
               imageAlt=""
