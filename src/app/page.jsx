@@ -313,16 +313,8 @@ export default function Home() {
             </span>
             <div className="flex flex-col gap-3.5 lg:flex-row">
               <div className="flex gap-3">
-                <img
-                  src="/images/Atalanta.avif"
-                  alt=""
-                  className="w-10"
-                ></img>
-                <img
-                  src="/images/IstitutoCQ.png"
-                  alt=""
-                  className="w-10"
-                ></img>
+                <img src="/images/Atalanta.avif" alt="" className="w-10"></img>
+                <img src="/images/IstitutoCQ.png" alt="" className="w-10"></img>
               </div>
               <Button
                 asChild
@@ -382,7 +374,7 @@ export default function Home() {
             asChild
             className="flex w-full items-center justify-center gap-3.5 rounded-xl"
           >
-            <Link href="/spazi">
+            <Link href="/spazi" className="flex gap-2.5">
               Esplora lo studio
               <MoveRight className="w-10"></MoveRight>
             </Link>

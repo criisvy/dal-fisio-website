@@ -1,6 +1,7 @@
 import Button from "@/components/Button";
 import CardContainer from "@/components/CardContainer";
 import { CircleSmall, Award, MoveRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ChiSiamo() {
@@ -35,8 +36,7 @@ export default function ChiSiamo() {
                     <strong> ospedalieri, </strong> servizio privato domiciliare
                     e società sportive professionistiche tra cui
                     <strong>
-                      {" "}
-                      Atalanta Bergamasca Calcio e Bergamo Basket 2014.{" "}
+                      Atalanta Bergamasca Calcio e Bergamo Basket 2014.
                     </strong>
                   </li>
                   <li className="text-brownish">
@@ -243,16 +243,47 @@ export default function ChiSiamo() {
           </div>
         </article>
       </section>
-      {/* <section>
-        <div>
-          <h1>Abbiamo colaborato</h1>
-          <div className="flex gap-6">
-            <img src="/images/Atalanta.avif" className="w-24"></img>
-            <img src="/images/IstitutoCQ.png" className="w-30"></img>
-            
-          </div>
+      <section className="m-4">
+        <h2 className="mt-9 text-center text-5xl font-bold">Collaborazioni</h2>
+        <div className="sm:bg-background mt-9 flex flex-wrap items-center justify-center gap-6 rounded-xl bg-white p-4 sm:flex">
+          <Link href="https://www.atalanta.it/">
+            <Image
+              width={100}
+              height={120}
+              src="/images/Atalanta.avif"
+              className="2-30"
+              alt="#"
+            ></Image>
+          </Link>
+          <Link href="https://www.clinicaquarenghi.it/">
+            <Image
+              width={120}
+              height={120}
+              src="/images/IstitutoCQ.png"
+              className="w-30"
+              alt="#"
+            ></Image>
+          </Link>
+          <Link href="https://www.instagram.com/bergamo_basket_2014">
+            <Image
+              width={120}
+              height={120}
+              src="/images/Bergamo_Basket_2014_logo.png"
+              className="w-30"
+              alt="#"
+            ></Image>
+          </Link>
+          <Link href="https://www.grupposandonato.it/strutture/policlinico-san-marco">
+            <Image
+              width={120}
+              height={120}
+              src="/images/GruppoSanDonato.png"
+              alt="#"
+              className="w-30"
+            />
+          </Link>
         </div>
-      </section> */}
+      </section>
       <section className="mt-20 hidden justify-center sm:flex">
         <div className="flex w-6xl items-center rounded-xl bg-white p-16">
           <div className="flex flex-col items-center gap-8">
