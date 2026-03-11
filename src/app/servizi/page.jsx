@@ -7,7 +7,7 @@ const ServicesPage = () => {
   return (
     <main className="mx-auto mt-6 max-w-6xl px-4 sm:mt-9">
       <section className="mt-6 flex justify-center sm:mt-9">
-        <div className="sm:bg-background flex flex-col items-center gap-2.5 rounded-xl bg-white p-4 sm:flex-row sm:gap-16 sm:p-0">
+        <div className="sm:bg-background flex flex-col items-center gap-2.5 rounded-xl bg-white p-4 lg:flex-row md:gap-16 lg:p-0">
           <div className="flex flex-col gap-4">
             <h1 className="text-4xl font-bold sm:mb-2.5 sm:text-5xl">
               I Nostri Servizi
@@ -20,7 +20,7 @@ const ServicesPage = () => {
             <div className="flex w-full items-center">
               <Button
                 asChild
-                className="w-full rounded-xl px-6 text-center sm:w-fit"
+                className="w-full rounded-xl px-6 text-center lg:w-fit"
               >
                 <Link href="/contatti">Contattaci</Link>
               </Button>
