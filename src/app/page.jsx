@@ -72,7 +72,7 @@ export default function Home() {
           </div>
         </div>
         <img
-          className="h-[675px] w-full rounded-2xl bg-fixed object-cover shadow-md sm:h-[575px]"
+          className="h-[500px] w-full rounded-2xl bg-fixed object-cover shadow-md sm:h-[575px]"
           src="/images/centrofisioterapia.jpg"
           alt=""
         />

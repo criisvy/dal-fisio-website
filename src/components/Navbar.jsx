@@ -77,22 +77,32 @@ export default function Navbar() {
         </ul>
       </nav>
       {isMenuOpen ? (
-        <div className="bg-primary h-screen w-full p-9">
+        <div className="bg-primary h-screen w-full p-6">
           <div className="flex w-full justify-between">
-            <div className="">
-              <Link href="/">
-                <img
-                  className="w-40"
-                  src="/logo/logo-bianco-complete.svg"
-                ></img>
-              </Link>
-            </div>
+            <Link href="/">
+              <img className="w-40" src="/logo/logo-bianco-complete.svg"></img>
+            </Link>
+
             <button onClick={toggleMenu}>
-              <XIcon className="size-10 text-white" />
+              <span
+                className={`block h-0.5 w-6 rounded-sm bg-white transition-all duration-300 ease-out ${
+                  isMenuOpen ? "translate-y-1 rotate-45" : "-translate-y-0.5"
+                }`}
+              ></span>
+              <span
+                className={`my-0.5 block h-0.5 w-6 rounded-sm bg-white transition-all duration-300 ease-out ${
+                  isMenuOpen ? "opacity-0" : "opacity-100"
+                }`}
+              ></span>
+              <span
+                className={`block h-0.5 w-6 rounded-sm bg-white transition-all duration-300 ease-out ${
+                  isMenuOpen ? "-translate-y-1 -rotate-45" : "translate-y-0.5"
+                }`}
+              ></span>
             </button>
           </div>
           <nav className="flex flex-col items-center">
-            <ul className="my-52 flex flex-col gap-11">
+            <ul className="my-34 flex flex-col gap-11">
               <li className="text-[32px] font-bold text-white">
                 <Link href="/servizi">Servizi</Link>
               </li>
@@ -127,7 +137,7 @@ export default function Navbar() {
           </nav>
         </div>
       ) : (
-        <div className="flex w-full max-w-7xl justify-between rounded-xl bg-white p-9 drop-shadow-sm sm:hidden">
+        <div className="flex w-full max-w-6xl justify-between rounded-xl bg-white p-6 drop-shadow-sm sm:hidden">
           <div className="">
             <Link href="/">
               <img
@@ -136,8 +146,25 @@ export default function Navbar() {
               ></img>
             </Link>
           </div>
-          <button onClick={toggleMenu}>
-            <Menu className="size-8" />
+          <button
+            onClick={toggleMenu}
+            className="flex flex-col items-center justify-center"
+          >
+            <span
+              className={`block h-0.5 w-6 rounded-sm bg-black transition-all duration-300 ease-out ${
+                isMenuOpen ? "translate-y-1 rotate-45" : "-translate-y-0.5"
+              }`}
+            ></span>
+            <span
+              className={`my-0.5 block h-0.5 w-6 rounded-sm bg-black transition-all duration-300 ease-out ${
+                isMenuOpen ? "opacity-0" : "opacity-100"
+              }`}
+            ></span>
+            <span
+              className={`block h-0.5 w-6 rounded-sm bg-black transition-all duration-300 ease-out ${
+                isMenuOpen ? "-translate-y-1 -rotate-45" : "translate-y-0.5"
+              }`}
+            ></span>
           </button>
         </div>
       )}
