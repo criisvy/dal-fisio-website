@@ -102,24 +102,24 @@ export default function Navbar() {
             </button>
           </div>
           <nav className="flex flex-col items-center">
-            <ul className="my-34 flex flex-col gap-11">
-              <li className="text-[32px] font-bold text-white">
+            <ul className="my-20 flex flex-col gap-11">
+              <li className="text-4xl font-bold text-white">
                 <Link href="/servizi">Servizi</Link>
               </li>
-              <li className="text-[32px] font-bold text-white">
+              <li className="text-4xl font-bold text-white">
                 <Link href="/chi-siamo">Chi Siamo</Link>
               </li>
-              <li className="text-[32px] font-bold text-white">
+              <li className="text-4xl font-bold text-white">
                 <Link href="/spazi">Spazi</Link>
               </li>
-              <li className="text-[32px] font-bold text-white">
+              <li className="text-4xl font-bold text-white">
                 <Link href="/contatti">Contatti</Link>
               </li>
               <button
                 className="flex w-fit items-center gap-3 rounded-xl p-3 text-[30px] font-bold text-white outline-3 outline-white"
                 href="tel:3450906595"
               >
-                <Phone className="size-6 font-bold" />
+                <Phone className="size-8 font-bold" />
                 345 090 6595
               </button>
             </ul>
