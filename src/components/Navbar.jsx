@@ -102,7 +102,7 @@ export default function Navbar() {
             </button>
           </div>
           <nav className="flex flex-col items-center">
-            <ul className="my-20 flex flex-col gap-11">
+            <ul className="my-28 flex flex-col gap-11">
               <li className="text-4xl font-bold text-white">
                 <Link href="/servizi">Servizi</Link>
               </li>
