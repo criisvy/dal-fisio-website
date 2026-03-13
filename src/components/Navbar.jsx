@@ -6,7 +6,6 @@ import FacebookIcon from "@/icons/FacebookIcon";
 import InstagramIcom from "@/icons/InstagramIcon";
 import Link from "next/link";
 import Button from "./Button";
-import { cn } from "@/utils/cn";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -101,18 +100,27 @@ export default function Navbar() {
               ></span>
             </button>
           </div>
+
           <nav className="flex flex-col items-center">
             <ul className="my-28 flex flex-col gap-11">
-              <li className="text-4xl font-bold text-white">
+              <li
+                className={`text-4xl text-white ${pathname === "/servizi" ? "font-bold" : "font-normal"}`}
+              >
                 <Link href="/servizi">Servizi</Link>
               </li>
-              <li className="text-4xl font-bold text-white">
+              <li
+                className={`text-4xl text-white ${pathname === "/chi-siamo" ? "font-bold" : "font-normal"}`}
+              >
                 <Link href="/chi-siamo">Chi Siamo</Link>
               </li>
-              <li className="text-4xl font-bold text-white">
+              <li
+                className={`text-4xl text-white ${pathname === "/spazi" ? "font-bold" : "font-normal"}`}
+              >
                 <Link href="/spazi">Spazi</Link>
               </li>
-              <li className="text-4xl font-bold text-white">
+              <li
+                className={`text-4xl text-white ${pathname === "/contatti" ? "font-bold" : "font-normal"}`}
+              >
                 <Link href="/contatti">Contatti</Link>
               </li>
               <button
