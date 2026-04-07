@@ -303,7 +303,7 @@ export default function Home() {
               Chi Siamo
             </h2>
             <p className="text-brownish mb-4 sm:mb-8">
-              Siamo Luca, Matteo e Marianna, tre fisioterapisti con la passione
+              Siamo Luca e Matteo, due fisioterapisti con la passione
               per il recupero funzionale. La nostra missione è aiutarti a
               superare il dolore e a tornare alle tue passioni, che sia lo sport
               o la vita di tutti i giorni.

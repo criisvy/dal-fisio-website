@@ -187,7 +187,7 @@ export default function ChiSiamo() {
             </div>
           </div>
         </article>
-        <article className="mx-4 flex justify-center sm:mt-20">
+        {/* <article className="mx-4 flex justify-center sm:mt-20">
           <div className="flex w-6xl flex-col items-center gap-6 rounded-xl bg-white p-4 sm:flex-row sm:gap-9 sm:px-20 sm:py-16">
             <div className="w-full">
               <img
@@ -249,7 +249,7 @@ export default function ChiSiamo() {
               </ul>
             </div>
           </div>
-        </article>
+        </article> */}
       </section>
       <section className="m-4">
         <h2 className="mt-9 text-center text-5xl font-bold">Collaborazioni</h2>
