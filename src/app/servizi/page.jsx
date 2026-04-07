@@ -7,7 +7,7 @@ const ServicesPage = () => {
   return (
     <main className="mx-auto mt-6 max-w-6xl px-4 sm:mt-9">
       <section className="mt-6 flex justify-center sm:mt-9">
-        <div className="sm:bg-background flex flex-col items-center gap-2.5 rounded-xl bg-white p-4 lg:flex-row md:gap-16 lg:p-0">
+        <div className="sm:bg-background flex flex-col items-center gap-2.5 rounded-xl bg-white p-4 md:gap-16 lg:flex-row lg:p-0">
           <div className="flex flex-col gap-4">
             <h1 className="text-4xl font-bold sm:mb-2.5 sm:text-5xl">
               I Nostri Servizi
@@ -22,7 +22,9 @@ const ServicesPage = () => {
                 asChild
                 className="w-full rounded-xl px-6 text-center lg:w-fit"
               >
-                <Link href="/contatti">Contattaci</Link>
+                <Link href="/contatti" className="font-bold">
+                  Contattaci
+                </Link>
               </Button>
             </div>
           </div>
@@ -156,7 +158,7 @@ const ServicesPage = () => {
                 className="flex w-full justify-center gap-9 rounded-xl pl-7 sm:w-fit"
               >
                 <Link href="/servizi">
-                  <div className="flex w-full justify-center gap-9 rounded-xl sm:w-fit">
+                  <div className="flex w-full justify-center gap-9 rounded-xl font-bold sm:w-fit">
                     Scopri i nostri spazi
                     <MoveRight />
                   </div>

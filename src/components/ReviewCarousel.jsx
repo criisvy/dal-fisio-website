@@ -13,8 +13,6 @@ const ReviewCarousel = () => {
       <CarouselContent>
         <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/3">
           <Review
-            imageSrc="/images/Avatarexample.jpg"
-            imageAlt=""
             name="Nicolò Orlandini"
             text="Contattato dopo essermi rotto la clavicola per recuperare mobilità
               e forza, ho trovato grande competenza e serietà. Oltre alle sedute
@@ -24,8 +22,6 @@ const ReviewCarousel = () => {
         </CarouselItem>
         <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/3">
           <Review
-            imageSrc="/images/Avatarexample.jpg"
-            imageAlt=""
             name="Alessandro Rozzoni"
             text="Mi sono rivolto a Luca in seguito a un infortunio all’adduttore e
               non posso che ritenermi estremamente soddisfatto del percorso
@@ -35,8 +31,6 @@ const ReviewCarousel = () => {
         </CarouselItem>
         <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/3">
           <Review
-            imageSrc="/images/Avatarexample.jpg"
-            imageAlt=""
             name="Luigi Paulli"
             text="Grazie dott. Luca per aver curato mio figlio per l’incidente alla
               spalla ,ora sta benissimo, grazie !! E mia mamma per la frattura
@@ -46,8 +40,6 @@ const ReviewCarousel = () => {
         </CarouselItem>
         <CarouselItem className="basis-full md:basis-1/2 lg:basis-1/3">
           <Review
-            imageSrc="/images/Avatarexample.jpg"
-            imageAlt=""
             name="Monica Marconi"
             text="Sono stata da Luca per riabilitazione a seguito di intervento di protesi al ginocchio. Mi sono ripresa ripresa perfettamente grazie alla sua competenza, professionalità e rigore nel seguirmi in un ambiente familiare e ben curato!"
           ></Review>

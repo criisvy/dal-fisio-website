@@ -68,7 +68,7 @@ export default function Navbar() {
           <Button className="flex gap-2 rounded-xl font-bold">
             <a href="tel:3450906595">
               <div className="flex gap-2 rounded-xl font-bold">
-                Chiama
+                Chiamaci
                 <Phone />
               </div>
             </a>

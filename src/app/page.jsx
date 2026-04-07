@@ -59,7 +59,7 @@ export default function Home() {
             recupero post-chirurgico e post-traumatico.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button className="group hover:bg-primary-background flex w-full items-center justify-center gap-2 rounded-xl p-4 px-5 sm:w-fit">
+            <Button className="group flex w-full items-center justify-center gap-2 rounded-xl p-4 px-5 sm:w-fit">
               <Phone className="size-6" />
               <span className="font-bold">345 090 6595</span>
             </Button>
@@ -271,8 +271,8 @@ export default function Home() {
                 Proponiamo esercizi terapeutici <strong>su misura, </strong>
                 <strong>adattati </strong>alle caratteristiche e agli obiettivi
                 del paziente, per favorire l’autonomia,
-                <strong>prevenire </strong>ricadute e
-                <strong>migliorare </strong>la qualità della vita.
+                <strong> prevenire </strong>ricadute e
+                <strong> migliorare </strong>la qualità della vita.
               </p>
             </div>
           </article>
@@ -513,14 +513,14 @@ export default function Home() {
             </Button>
             <Button
               asChild
-              className="flex w-full justify-center gap-2.5 rounded-xl bg-white outline-1 outline-black hover:bg-white sm:w-fit"
+              className="group hover:outline-primary flex w-full justify-center gap-2.5 rounded-xl bg-white outline-1 outline-black hover:outline-2 sm:w-fit"
             >
               <Link href="/servizi">
                 <div className="flex w-full justify-center gap-2.5 rounded-xl sm:w-fit">
                   <span className="font-bold text-black">
                     Scopri i nostri servizi
                   </span>
-                  <MoveRight className="text-black"></MoveRight>
+                  <MoveRight className="group group-hover:text-primary text-black"></MoveRight>
                 </div>
               </Link>
             </Button>

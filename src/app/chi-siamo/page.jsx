@@ -60,7 +60,9 @@ export default function ChiSiamo() {
                     <Award className="text-primary size-full" />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="font-bold">Laurea in Fisioterapia</h3>
+                    <h3 className="text-brownish font-bold">
+                      Laurea in Fisioterapia
+                    </h3>
                     <h3 className="text-brownish">
                       Università Vita Salute San Raffaele
                     </h3>
@@ -71,7 +73,7 @@ export default function ChiSiamo() {
                     <Award className="text-primary size-full" />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="font-bold">
+                    <h3 className="text-brownish font-bold">
                       Master in Riabilitazione dei Disordini Muscolo-Scheletrici
                     </h3>
                     <h3 className="text-brownish">
@@ -84,7 +86,9 @@ export default function ChiSiamo() {
                     <Award className="text-primary size-full" />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="font-bold">Titolo internazionale di OMPT</h3>
+                    <h3 className="text-brownish font-bold">
+                      Titolo internazionale di OMPT
+                    </h3>
                     <h3 className="text-brownish">
                       Università degli Studi di Genova
                     </h3>
@@ -95,7 +99,7 @@ export default function ChiSiamo() {
                     <Award className="text-primary size-full" />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="font-bold">
+                    <h3 className="text-brownish font-bold">
                       Corso Advanced di Tecniche Manuali
                     </h3>
                     <h3 className="text-brownish">Accademia Terapie Manuali</h3>
@@ -148,7 +152,7 @@ export default function ChiSiamo() {
                     <Award className="text-primary size-full" />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="font-bold">
+                    <h3 className="text-brownish font-bold">
                       Laurea triennale in Fisioterapia
                     </h3>
                     <h3 className="text-brownish">
@@ -161,7 +165,7 @@ export default function ChiSiamo() {
                     <Award className="text-primary size-full" />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="font-bold">
+                    <h3 className="text-brownish font-bold">
                       Master in Fisioterapia Applicata allo Sport e alle
                       Attività Artistiche
                     </h3>
@@ -173,7 +177,7 @@ export default function ChiSiamo() {
                     <Award className="text-primary size-full" />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="font-bold">
+                    <h3 className="text-brownish font-bold">
                       Corso "Strenght and Conditioning"
                     </h3>
                     <h3 className="text-brownish">Fisioscience</h3>
@@ -210,7 +214,7 @@ export default function ChiSiamo() {
                     <Award className="text-primary size-full" />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="font-bold">
+                    <h3 className="text-brownish font-bold">
                       Laurea triennale in Fisioterapia
                     </h3>
                     <h3 className="text-brownish">
@@ -223,7 +227,9 @@ export default function ChiSiamo() {
                     <Award className="text-primary size-full" />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="font-bold">Corso di Dry Needling</h3>
+                    <h3 className="text-brownish font-bold">
+                      Corso di Dry Needling
+                    </h3>
                     <h3 className="text-brownish">PhisioVit</h3>
                   </div>
                 </li>
@@ -232,7 +238,9 @@ export default function ChiSiamo() {
                     <Award className="text-primary size-full" />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="font-bold">Corso di Taping sportivo</h3>
+                    <h3 className="text-brownish font-bold">
+                      Corso di Taping sportivo
+                    </h3>
                     <h3 className="text-brownish">
                       Accademia Italiana Massaggi
                     </h3>
