@@ -22,21 +22,21 @@ export default function Spazi() {
               width={544}
               height={758}
               className="col-span-1 row-span-2 h-full rounded-xl object-cover shadow-md"
-              src="/images/spazi1.jpg"
+              src="/images/Gym_Area (2).jpg"
               alt=""
             />
             <Image
               width={544}
               height={362}
               className="h-full rounded-xl object-cover shadow-md"
-              src="/images/spaz3.jpeg"
+              src="/images/Gym_Area.jpg"
               alt=""
             />
             <Image
               width={544}
               height={362}
               className="h-full rounded-xl object-cover shadow-md"
-              src="/images/spazi4.jpg"
+              src="/images/Gym_Wide (4).jpg"
               alt=""
             />
           </div>
@@ -56,7 +56,7 @@ export default function Spazi() {
         </div>
         <div className="mt-11 flex flex-wrap justify-center gap-4 sm:gap-8">
           <Card
-            imageSrc="/images/TerapiaManuale.png"
+            imageSrc="/images/Sculpture.jpg"
             imageAlt=""
             heading="Terapia Manuale"
             text="Tecniche avanzate per il trattamento del dolore e il recupero
@@ -70,7 +70,7 @@ export default function Spazi() {
               tessuti."
           ></Card>
           <Card
-            imageSrc="/images/Valutazione.png"
+            imageSrc="/images/Studio_Table (2).jpg"
             imageAlt=""
             heading="Valutazioni Personalizzate"
             text="Un'analisi approfondita per definire il percorso di fisioterapia
@@ -81,7 +81,7 @@ export default function Spazi() {
       <section className="mt-12 flex flex-col items-center p-4 sm:mt-24">
         <div className="flex flex-col items-center gap-5 sm:gap-9">
           <h1 className="text-center text-5xl font-bold">
-            La Palestra Riabilitativa (In Arrivo)
+            La Palestra Riabilitativa
           </h1>
           <p className="text-brownish max-w-3xl text-center">
             Il prossimo passo nel tuo percorso di guarigione. Uno spazio ampio e
@@ -92,7 +92,7 @@ export default function Spazi() {
           </p>
           <div className="mt-11 flex flex-wrap justify-center gap-4 sm:gap-8">
             <Card
-              imageSrc="/images/WomanTraining1.png"
+              imageSrc="/images/Gym_Wide (5).jpg"
               imageAlt=""
               heading="Recupero Post-Chirurgico"
               text="Programmi di rinforzo mirati per un recupero completo e sicuro."

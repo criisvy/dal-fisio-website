@@ -73,7 +73,7 @@ export default function Home() {
         </div>
         <img
           className="h-[500px] w-full rounded-2xl bg-fixed object-cover shadow-md sm:h-[575px]"
-          src="/images/centrofisioterapia.jpg"
+          src="/images/Gym_Wide.jpg"
           alt=""
         />
       </header>
@@ -138,12 +138,12 @@ export default function Home() {
         </div>
         <div className="grid w-full grid-cols-2 justify-center gap-2.5 lg:relative lg:my-auto lg:flex lg:aspect-450/400 lg:w-[500px]">
           <img
-            src="/images/inostriservizi.jpg"
+            src="/images/Weights.jpg"
             alt=""
             className="h-full w-full rounded-xl object-cover shadow-md md:h-72 lg:absolute lg:top-0 lg:left-0 lg:z-0 lg:h-auto lg:w-3/4"
           />
           <img
-            src="/images/inostriservizi3.jpg"
+            src="/images/Studio_Bed.jpg"
             alt=""
             className="h-full w-full rounded-xl object-cover shadow-md md:h-72 lg:absolute lg:right-0 lg:bottom-2 lg:h-auto lg:w-2/3 lg:border-3 lg:border-white"
           />
@@ -361,12 +361,12 @@ export default function Home() {
         </div>
         <div className="flex w-full flex-col gap-2.5 sm:grid sm:grid-cols-2 sm:gap-4 lg:order-1">
           <img
-            src="/images/spazi.jpg"
+            src="/images/Gym_Wide (3).jpg"
             className="h-54 w-full rounded-xl object-cover shadow-md sm:h-74"
             alt=""
           />
           <img
-            src="/images/spazi2.jpg"
+            src="/images/Studio_wider (2).jpg"
             className="h-54 w-full rounded-xl object-cover shadow-md sm:h-74"
             alt=""
           ></img>

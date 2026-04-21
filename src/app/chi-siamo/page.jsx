@@ -20,8 +20,8 @@ export default function ChiSiamo() {
           <div className="flex w-6xl flex-col items-center gap-6 rounded-xl bg-white p-4 sm:flex-row sm:gap-9 sm:px-20 sm:py-16">
             <div className="w-full">
               <img
-                src="/images/LucaPic.png"
-                className="w-full min-w-3xs"
+                src="/images/Luca_34_Smile2.jpg"
+                className="w-full min-w-3xs rounded-xl"
                 alt="luca-gavazzeni"
               ></img>
             </div>
@@ -110,12 +110,12 @@ export default function ChiSiamo() {
           </div>
         </article>
         <article className="mx-4 flex justify-center sm:mt-20">
-          <div className="flex w-6xl flex-col gap-6 rounded-xl bg-white p-4 sm:flex-row sm:gap-9 sm:px-20 sm:py-16">
+          <div className="flex w-6xl flex-col items-center gap-6 rounded-xl bg-white p-4 sm:flex-row sm:gap-9 sm:px-20 sm:py-16">
             <div className="w-full sm:order-2">
               <img
-                src="/images/MatteoPic.png"
+                src="/images/Matteo_Full_Smile (2).jpg"
                 alt="matteo-rossi"
-                className="w-full min-w-3xs"
+                className="w-full min-w-3xs rounded-xl"
               ></img>
             </div>
             <div className="flex flex-col gap-2.5 sm:order-1 sm:gap-6">

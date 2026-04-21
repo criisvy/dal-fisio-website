@@ -138,7 +138,7 @@ export default function Navbar() {
               <a href="#">
                 <FacebookIcon className="size-8 text-white" />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/dalfisio_/">
                 <InstagramIcom className="size-8 text-white" />
               </a>
             </div>

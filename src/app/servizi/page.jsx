@@ -48,7 +48,7 @@ const ServicesPage = () => {
 
         <div className="flex flex-wrap justify-center gap-5 sm:gap-18">
           <Card
-            imageSrc="/images/Knee.png"
+            imageSrc="/images/Studio_Table (3).jpg"
             imageAlt=""
             heading="Valutazione fisioterapica"
             text="Ogni percorso inizia con una valutazione approfondita: analisi del dolore, della postura, del movimento e delle capacità funzionali. Questo ci permette di individuare le cause del problema e definire obiettivi chiari e realistici."

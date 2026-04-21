@@ -71,13 +71,14 @@ const Footer = () => {
         <div className="flex flex-col gap-3.5">
           <div className="flex justify-center gap-4 sm:order-last">
             <WhatsAppIcon className="text-brownish hover:text-whatsapp size-6 hover:scale-105"></WhatsAppIcon>
-            <InstagramIcon className="text-brownish size-6 hover:scale-105 hover:text-pink-600"></InstagramIcon>
+            <a href="https://www.instagram.com/dalfisio_/">
+              <InstagramIcon className="text-brownish size-6 hover:scale-105 hover:text-pink-600"></InstagramIcon>
+            </a>
             <FacebookIcon className="text-brownish size-6 hover:scale-105 hover:text-sky-500"></FacebookIcon>
           </div>
           <div className="flex flex-col items-center justify-center sm:order-first">
             <span className="text-brownish">Privacy Policy</span>
             <span className="text-brownish">Cookie Policy</span>
-            <span className="text-brownish">Contatti</span>
           </div>
         </div>
       </div>
