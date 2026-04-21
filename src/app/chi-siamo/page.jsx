@@ -120,7 +120,7 @@ export default function ChiSiamo() {
             </div>
             <div className="flex flex-col gap-2.5 sm:order-1 sm:gap-6">
               <div className="flex flex-col gap-2.5 sm:gap-6">
-                <h2 className="text-2xl font-bold">Matteo Rossi</h2>
+                <h2 className="text-2xl font-bold">Matteo Maini</h2>
                 <ul className="text-justify">
                   <li className="text-brownish">
                     Sono un fisioterapista specializzato in
