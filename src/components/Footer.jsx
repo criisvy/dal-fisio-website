@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="flex flex-col">
             <p className="font-bold">Studio Fisioterapico Bergamo</p>
             <p className="font-bold">Dott. Luca Gavazzeni</p>
-            <p className="font-bold">Dott. Matteo Rossi</p>
+            <p className="font-bold">Dott. Matteo Maini</p>
           </div>
           <div className="">
             <a href="https://maps.app.goo.gl/dtU2nXjPK79vZJTU7">
@@ -30,9 +30,6 @@ const Footer = () => {
             </a>
             <p className="text-brownish hover:underline">
               Email <strong>info@fisiobergamo.it</strong>
-            </p>
-            <p className="text-brownish hover:underline">
-              P.IVA <strong>04567890123</strong>
             </p>
           </div>
         </div>

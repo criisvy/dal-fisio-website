@@ -328,7 +328,7 @@ export default function Home() {
             </div>
           </div>
           <img
-            src="/images/Phisiotherapists.jpg"
+            src="/images/Both_Smile (2).jpg"
             className="h-80 w-full rounded-xl object-cover object-top shadow-md md:max-w-1/2 lg:min-h-[550px]"
             alt=""
           />
