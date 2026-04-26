@@ -1,9 +1,31 @@
+"use client";
+
 import Button from "@/components/Button";
 import { Mails, PhoneCall, MapPinCheck, ArrowBigRight } from "lucide-react";
 import WhatsAppIcon from "@/icons/WhatsappIcon";
 import RoundedIconWrapper from "@/components/RoundedIconWrapper";
 
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
+const SERVICE_ID = "service_n8lf6mz";
+const TEMPLATE_ID = "template_9utwno1";
+const PUBLIC_KEY = "ANNZ9FjwQz1-TA1Td";
+
 export default function Contatti() {
+  const formRef = useRef();
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      .then(() => setStatus("success"))
+      .catch(() => setStatus("error"));
+  };
+
   return (
     <main className="mx-auto mt-9 max-w-6xl px-4">
       <section>
@@ -64,7 +86,11 @@ export default function Contatti() {
       </section>
       <section className="mt-24 flex flex-col items-center justify-center gap-12">
         <h2 className="mb-1.5 text-4xl font-bold">Inviaci un mesaggio</h2>
-        <form className="flex w-full flex-col justify-center gap-2.5 sm:gap-7">
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="flex w-full flex-col justify-center gap-2.5 sm:gap-7"
+        >
           <div className="flex flex-col gap-2.5">
             <label htmlFor="name" className="font-bold">
               Nome e Cognome
@@ -72,7 +98,7 @@ export default function Contatti() {
             <input
               className="rounded-xl bg-white p-2.5"
               type="text"
-              name="user-name"
+              name="name"
               id="name"
               required
               placeholder="Mario Rossi"
@@ -132,8 +158,22 @@ export default function Contatti() {
               required
             ></textarea>
           </div>
-          <Button className="mt-9 ml-auto flex w-full justify-center gap-3 rounded-xl p-4 sm:w-fit sm:gap-2">
-            <span className="font-bold">Invia messaggio</span>
+          {status === "success" && (
+            <p className="font-medium text-green-600">
+              Messaggio inviato con successo!
+            </p>
+          )}
+          {status === "error" && (
+            <p className="font-medium text-red-600">
+              Qualcosa è andato storto. Riprova più tardi.
+            </p>
+          )}
+          <Button
+            type="submit"
+            className="mt-9 ml-auto flex w-full justify-center gap-3 rounded-xl p-4 sm:w-fit sm:gap-2"
+          >
+            <span className="font-bold"></span>
+            {status === "sending" ? "Invio in corso..." : "Invia messaggio"}
             <ArrowBigRight />
           </Button>
         </form>
