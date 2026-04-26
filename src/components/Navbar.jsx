@@ -7,6 +7,7 @@ import InstagramIcom from "@/icons/InstagramIcon";
 import Link from "next/link";
 import Button from "./Button";
 import { usePathname } from "next/navigation";
+import AnimatedUnderline from "./AnimatedUnderline";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,18 +52,24 @@ export default function Navbar() {
         <ul className="flex items-center gap-9">
           <li className="font-bold">
             <Link href="/servizi">
-              <span className="transition-shadow">Servizi</span>
+              <span className="transition-shadow">
+                <AnimatedUnderline>Servizi</AnimatedUnderline>
+              </span>
             </Link>
           </li>
           <li className="font-bold">
-            <Link href="/chi-siamo">Chi siamo</Link>
+            <Link href="/chi-siamo">
+              <AnimatedUnderline>Chi siamo</AnimatedUnderline>
+            </Link>
           </li>
           <li className="font-bold">
-            <Link href="/spazi">Spazi</Link>
+            <Link href="/spazi">
+              <AnimatedUnderline>Spazi</AnimatedUnderline>
+            </Link>
           </li>
           <li className="font-bold">
             <Link href="/contatti" className="">
-              Contatti
+              <AnimatedUnderline>Contatti</AnimatedUnderline>
             </Link>
           </li>
           <Button className="flex gap-2 rounded-xl font-bold">
